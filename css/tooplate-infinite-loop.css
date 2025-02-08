@@ -298,20 +298,15 @@ blockquote {
   z-index: 0;
 }
 
-.tm-testimonial-item {
-  max-width: 100%; /* Убираем ограничения по ширине для отзыва */
-  width: 100%; /* Текст и изображение будут занимать всю доступную ширину */
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+.tm-testimonials-carousel {
+  max-width: 1050px;
+  margin: 0 auto;
 }
 
-.tm-testimonial-item blockquote {
-  width: 100%; /* Текст будет занимать всю ширину блока */
-  margin: 0 auto;
-  padding: 0 50px; /* Увеличенные отступы, чтобы текст не прилипал к краям */
-  font-size: 18px; /* Размер шрифта */
-  line-height: 1.8; /* Высота строк */
+.tm-testimonial-item {
+  max-width: 290px;
+  margin-left: 35px;
+  margin-right: 35px;
 }
 
 .tm-testimonial-item img {
@@ -324,17 +319,6 @@ blockquote {
   font-style: italic;
   font-size: 1.1rem;
 }
-
-
-
-
-.red-indent {
-  text-align: justify; /* Растягиваем текст по ширине */
-  text-indent: 30px; /* Красная строка для первого абзаца */
-  line-height: 1,6; /* Для улучшения читаемости */
-}
-
-
 
 /* Work */
 
@@ -540,10 +524,8 @@ figure.effect-honey:hover h2 i {
 }
 
 .contact-item {
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: 20px;
   margin-bottom: 50px;
-  text-align: center;
 }
 
 .item-link {
