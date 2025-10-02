@@ -111,9 +111,22 @@
     }
     </script>
     <style>
-        .tm-gallery-container img { transition: opacity 0.3s ease; }
+        .tm-gallery-container img { 
+            transition: opacity 0.3s ease;
+            will-change: opacity;
+        }
         .tm-gallery-container img[loading="lazy"] { opacity: 0; }
         .tm-gallery-container img.loaded { opacity: 1; }
+        
+        .tm-intro-img {
+            display: none !important;
+        }
+        
+        @media (min-width: 768px) {
+            .tm-intro-img {
+                display: block !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -212,38 +225,38 @@
                     <div class="tm-gallery-container">
                         <figure class="effect-chico tm-gallery-item portrait">
                             <a href="downloads/most_priemniy.rar" download>
-                                <img src="img/gallery/model-01.jpg" alt="3D модель приемного моста для капремонта скважин в Компас-3D" loading="lazy">
+                                <img src="img/gallery/model-01.jpg" alt="3D модель приемного моста для капремонта скважин в Компас-3D" loading="eager">
                                 <figcaption><p>Спецтехника</p></figcaption>
                             </a>
                         </figure>
                         <figure class="effect-chico tm-gallery-item nature">
-                            <img src="img/gallery/drawing-01.jpg" alt="Сборочный чертеж оборудования в Компас 3D" loading="lazy">
+                            <img src="img/gallery/drawing-01.jpg" alt="Сборочный чертеж оборудования в Компас 3D" loading="eager">
                             <figcaption><p>Сборочные чертежи</p></figcaption>
                         </figure>
                         <figure class="effect-chico tm-gallery-item animal">
-                            <img src="img/gallery/calculation-01.jpg" alt="Расчет прочности сосудов и аппаратов в программе Пассат" loading="lazy">
+                            <img src="img/gallery/calculation-01.jpg" alt="Расчет прочности сосудов и аппаратов в программе Пассат" loading="eager">
                             <figcaption><p>Расчет прочности и устойчивости сосудов, аппаратов и их элементов</p></figcaption>
                         </figure>
                         <figure class="effect-chico tm-gallery-item building">
-                            <img src="img/gallery/documents-01.jpg" alt="Технические условия ТУ на оборудование" loading="lazy">
+                            <img src="img/gallery/documents-01.jpg" alt="Технические условия ТУ на оборудование" loading="eager">
                             <figcaption><p>Технические условия</p></figcaption>
                         </figure>
                         <figure class="effect-chico tm-gallery-item portrait">
                             <a href="downloads/emkost_avtozisterny_ 9m3.rar" download>
-                                <img src="img/gallery/model-02.jpg" alt="3D модель емкостного оборудования и аппаратов в Компас-3D" loading="lazy">
+                                <img src="img/gallery/model-02.jpg" alt="3D модель емкостного оборудования и аппаратов в Компас-3D" loading="eager">
                                 <figcaption><p>Емкостное оборудование</p></figcaption>
                             </a>
                         </figure>
                         <figure class="effect-chico tm-gallery-item nature">
-                            <img src="img/gallery/drawing-02.jpg" alt="Чертежи деталей оборудования в Компас" loading="lazy">
+                            <img src="img/gallery/drawing-02.jpg" alt="Чертежи деталей оборудования в Компас" loading="eager">
                             <figcaption><p>Чертежи деталей</p></figcaption>
                         </figure>
                         <figure class="effect-chico tm-gallery-item animal">
-                            <img src="img/gallery/calculation-02.jpg" alt="Расчет свайно-винтового фундамента и винтовых свай" loading="lazy">
+                            <img src="img/gallery/calculation-02.jpg" alt="Расчет свайно-винтового фундамента и винтовых свай" loading="eager">
                             <figcaption><p>Расчет винтовых свай</p></figcaption>
                         </figure>
                         <figure class="effect-chico tm-gallery-item building">
-                            <img src="img/gallery/documents-02.jpg" alt="Паспорт сосуда под давлением" loading="lazy">
+                            <img src="img/gallery/documents-02.jpg" alt="Паспорт сосуда под давлением" loading="eager">
                             <figcaption><p>Паспорта изделий</p></figcaption>
                         </figure>
                         <figure class="effect-chico tm-gallery-item portrait">
@@ -563,9 +576,6 @@
     <noscript><div><img src="https://mc.yandex.ru/watch/99955334" style="position:absolute; left:-9999px;" alt="Счетчик Яндекс Метрики"></div></noscript>
     <script>
         document.addEventListener('DOMContentLoaded',function(){const e=document.querySelectorAll('img[loading="lazy"]');e.forEach(e=>{e.addEventListener("load",function(){this.classList.add("loaded")}),e.complete&&e.classList.add("loaded")})});
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded',function(){const e=document.querySelectorAll('.tm-gallery-item');let t=1;const o=()=>{return window.innerWidth<768?4:window.innerWidth<1024?6:8},n=()=>{const o=Math.ceil(e.length/t()),n=document.querySelectorAll('.tm-paging-link');n.forEach(e=>{e.classList.remove("active"),parseInt(e.textContent)===t&&e.classList.add("active")})};document.addEventListener("click",function(e){e.target.classList.contains("tm-paging-link")&&(e.preventDefault(),t=parseInt(e.target.textContent),n(),document.querySelector(".tm-gallery-container")?.scrollIntoView({behavior:"smooth"}))}),window.addEventListener("resize",function(){t=1,n()}),n()});
     </script>
 </body>
 </html>
