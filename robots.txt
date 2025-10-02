@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /downloads/
+Disallow: /css/
+Disallow: /js/
+Disallow: /fontawesome/
+
+Sitemap: https://i31-engineering.ru/sitemap.xml
