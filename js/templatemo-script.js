@@ -44,7 +44,7 @@ $(document).ready(function () {
                 adjustGalleryLayout($.magnificPopup.instance.content.attr('id'));        
             }
         },
-        midClick: true, // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+        midClick: true,
         showCloseBtn: false
     });
 
@@ -76,10 +76,8 @@ $(document).ready(function () {
             exclusives.push(selector + '.' + currentFilter);
         }    
 
-        // smash all values back together for 'and' filtering
         filterValue = exclusives.length ? exclusives.join('') : '*';
 
-        // add page number to the string of filters
         var wordPage = currentPage.toString();
         filterValue += ('.'+wordPage);
         changeFilter(filterValue);
@@ -108,38 +106,32 @@ $(document).ready(function () {
             var selector = itemSelector;
             var exclusives = [];
                 
-                if(currentFilter != '*') {
-                    exclusives.push(selector + '.' + currentFilter);
-                }                
+            if(currentFilter != '*') {
+                exclusives.push(selector + '.' + currentFilter);
+            }                
 
-                // smash all values back together for 'and' filtering
-                filterValue = exclusives.length ? exclusives.join('') : '*';
+            filterValue = exclusives.length ? exclusives.join('') : '*';
                 
-                // find each child element with current filter values
-                $container.children(filterValue).each(function(){
-                    // increment page if a new one is needed
-                    if( item > itemsPerPage ) {
-                        page++;
-                        item = 1;
-                    }
-                    // add page number to element as a class
-                    wordPage = page.toString();
+            $container.children(filterValue).each(function(){
+                if( item > itemsPerPage ) {
+                    page++;
+                    item = 1;
+                }
+                wordPage = page.toString();
                     
-                    var classes = $(this).attr('class').split(' ');
-                    var lastClass = classes[classes.length-1];
-                    // last class shorter than 4 will be a page number, if so, grab and replace
-                    if(lastClass.length < 4){
-                        $(this).removeClass();
-                        classes.pop();
-                        classes.push(wordPage);
-                        classes = classes.join(' ');
-                        $(this).addClass(classes);
-                    } else {
-                        // if there was no page number, add it
-                       $(this).addClass(wordPage); 
-                    }
-                    item++;
-                });
+                var classes = $(this).attr('class').split(' ');
+                var lastClass = classes[classes.length-1];
+                if(lastClass.length < 4){
+                    $(this).removeClass();
+                    classes.pop();
+                    classes.push(wordPage);
+                    classes = classes.join(' ');
+                    $(this).addClass(classes);
+                } else {
+                    $(this).addClass(wordPage); 
+                }
+                item++;
+            });
             currentNumberPages = page;
         }();
         
@@ -161,11 +153,18 @@ $(document).ready(function () {
                         
                     $pager.html(i+1);
 
+                    // ✅ изменили этот блок
                     $pager.click(function(){
                         $('.tm-paging-link').removeClass('active');
                         $(this).addClass('active');
                         var page = $(this).eq(0).attr(pageAttribute);
+
+                        var scrollY = window.scrollY;   // запоминаем позицию
                         goToPage(page);
+
+                        if (window.innerWidth < 768) {
+                            setTimeout(() => window.scrollTo(0, scrollY), 50);
+                        }
                     });
                     $pager.appendTo($isotopePager);
                 }
@@ -187,11 +186,11 @@ $(document).ready(function () {
         $(e.target).addClass('active');
     })
 
-    //Handle window resize
+    // ✅ изменили этот блок
     $(window).resize(function(){
         itemsPerPage = defineItemsPerPage();
         setPagination();
-        goToPage(1);
+        goToPage(currentPage);   // ← остаёмся на текущей странице
     });
 
     /************** Video background *********/
