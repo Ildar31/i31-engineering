@@ -577,5 +577,14 @@
     <script>
         document.addEventListener('DOMContentLoaded',function(){const e=document.querySelectorAll('img[loading="lazy"]');e.forEach(e=>{e.addEventListener("load",function(){this.classList.add("loaded")}),e.complete&&e.classList.add("loaded")})});
     </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (location.hash === "#contact") {
+        setTimeout(() => {
+          document.querySelector('a[href="#contact"]')?.click();
+        }, 500);
+      }
+    });
+    </script>
 </body>
 </html>
