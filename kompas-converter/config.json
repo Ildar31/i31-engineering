@@ -4,12 +4,13 @@
   "message": "Бесплатная онлайн-версия. Поддержите разработку!",
   "donation_url": "https://yoomoney.ru/to/4100119389739602",
   "pro_version_price": "300₽",
-  "max_files_free": 60,
+  "max_files_free": 50,
   "features": {
     "free": ["basic_conversion", "structure_preservation"],
     "pro": ["basic_conversion", "structure_preservation", "unlimited_files", "offline_mode", "priority_support"]
   }
 
 }
+
 
 
