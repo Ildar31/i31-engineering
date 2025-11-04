@@ -874,7 +874,7 @@
                     
                     // Заполняем скрытую форму
                     document.getElementById('download-name').value = 'Скачивание утилиты';
-                    document.getElementById('download-email').value = 'download-notification@i31-engineering.ru';
+                    document.getElementById('download-email').value = 'irashitov79@mail.ru';
                     document.getElementById('download-inquiry').value = 'Программы';
                     document.getElementById('download-message').value = `СКАЧИВАНИЕ KOMPASAUTODOWNGRADER
 
@@ -884,24 +884,28 @@
 Браузер: ${userAgent}
 Версия файла: KompasAutoDowngrader_1.02.rar`;
                     
-                    // Отправляем форму
-                    const form = document.getElementById('download-tracking-form');
-                    const formData = new FormData(form);
+                    // Создаем невидимый iframe для отправки формы
+                    const iframe = document.createElement('iframe');
+                    iframe.name = 'download-frame';
+                    iframe.style.display = 'none';
+                    document.body.appendChild(iframe);
                     
-                    fetch('https://formspree.io/f/xqaelyaq', {
-                        method: 'POST',
-                        body: formData,
-                        mode: 'no-cors' // Важно! Это позволяет обойти CORS
-                    }).then(() => {
-                        console.log('Уведомление отправлено');
-                    }).catch(error => {
-                        console.error('Ошибка:', error);
-                    }).finally(() => {
-                        // Начинаем скачивание
+                    // Устанавливаем target формы на iframe
+                    const form = document.getElementById('download-tracking-form');
+                    form.target = 'download-frame';
+                    
+                    // Отправляем форму
+                    form.submit();
+                    console.log('Уведомление отправлено через форму');
+                    
+                    // Начинаем скачивание через небольшую задержку
+                    setTimeout(() => {
+                        window.location.href = downloadLink;
+                        // Удаляем iframe через 2 секунды
                         setTimeout(() => {
-                            window.location.href = downloadLink;
-                        }, 300);
-                    });
+                            document.body.removeChild(iframe);
+                        }, 2000);
+                    }, 500);
                 });
             });
         });
