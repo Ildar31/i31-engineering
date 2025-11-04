@@ -819,7 +819,7 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/templatemo-script.js"></script>
     
-    <!-- Скрипт для FAQ -->
+    <!-- Скрипт для FAQ и отслеживания скачиваний -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // FAQ аккордеон
@@ -848,6 +848,53 @@
                 if (img.complete) {
                     img.classList.add('loaded');
                 }
+            });
+            
+            // Отслеживание скачиваний утилиты
+            const downloadButtons = document.querySelectorAll('a[href*="KompasAutoDowngrader"]');
+            downloadButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault(); // Останавливаем скачивание на секунду
+                    
+                    const downloadLink = this.href;
+                    
+                    // Получаем информацию о скачивании
+                    const timestamp = new Date().toLocaleString('ru-RU');
+                    const userAgent = navigator.userAgent;
+                    const referrer = document.referrer || 'Прямой переход';
+                    const pageUrl = window.location.href;
+                    
+                    // Формируем данные для отправки
+                    const formData = new FormData();
+                    formData.append('name', 'Скачивание утилиты');
+                    formData.append('email', 'download-notification@i31-engineering.ru');
+                    formData.append('inquiry', 'Программы');
+                    formData.append('message', `СКАЧИВАНИЕ KOMPASAUTODOWNGRADER
+
+Время: ${timestamp}
+Страница: ${pageUrl}
+Источник перехода: ${referrer}
+Браузер: ${userAgent}
+Версия файла: KompasAutoDowngrader_1.02.rar`);
+                    
+                    // Отправляем уведомление через Formspree
+                    fetch('https://formspree.io/f/xqaelyaq', {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    }).then(response => {
+                        console.log('Уведомление отправлено:', response.ok);
+                    }).catch(error => {
+                        console.error('Ошибка отправки:', error);
+                    }).finally(() => {
+                        // Запускаем скачивание через небольшую задержку
+                        setTimeout(() => {
+                            window.location.href = downloadLink;
+                        }, 500);
+                    });
+                });
             });
         });
     </script>
