@@ -3,7 +3,7 @@
   "free_version_enabled": true,
   "message": "Бесплатная онлайн-версия. Поддержите разработку!",
   "donation_url": "https://yoomoney.ru/to/4100119389739602",
-  "pro_version_price": "300₽",
+  "pro_version_price": "100₽",
   "max_files_free": 50,
   "features": {
     "free": ["basic_conversion", "structure_preservation"],
@@ -11,6 +11,7 @@
   }
 
 }
+
 
 
 
