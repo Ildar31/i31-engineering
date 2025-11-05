@@ -808,15 +808,14 @@
         </div>
     </section>
 
-<!-- Скрытая форма для отслеживания скачиваний -->
-<form id="download-tracking-form" action="https://formspree.io/f/xqaelyaq" method="POST" style="display: block; padding: 20px; background: #f0f0f0; margin: 20px;">
-    <input type="hidden" name="_subject" value="Скачивание KompasAutoDowngrader">
-    <input type="text" name="name" id="download-name" value="Тестовая отправка" placeholder="Имя">
-    <input type="email" name="email" id="download-email" value="irashitov79@mail.ru" placeholder="Email">
-    <input type="text" name="inquiry" id="download-inquiry" value="Программы" placeholder="Тема">
-    <textarea name="message" id="download-message" placeholder="Сообщение">Тест отслеживания скачиваний</textarea>
-    <button type="submit" style="padding: 10px 20px; background: #4CAF50; color: white; border: none; cursor: pointer;">Отправить тест</button>
-</form>
+    <!-- Скрытая форма для отслеживания скачиваний -->
+    <form id="download-tracking-form" action="https://formspree.io/f/xqaelyaq" method="POST" style="display: none;">
+        <input type="hidden" name="_subject" value="Скачивание KompasAutoDowngrader">
+        <input type="text" name="name" id="download-name" value="">
+        <input type="email" name="email" id="download-email" value="">
+        <input type="text" name="inquiry" id="download-inquiry" value="">
+        <textarea name="message" id="download-message"></textarea>
+    </form>
 
     <footer class="tm-footer">
         <span>И31 Инжиниринг 2025</span>
