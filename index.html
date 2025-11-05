@@ -828,7 +828,7 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/templatemo-script.js"></script>
     
-    <!-- Скрипт для FAQ и отслеживания скачиваний -->
+<!-- Скрипт для FAQ и отслеживания скачиваний -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // FAQ аккордеон
@@ -861,14 +861,11 @@
             
             // Отслеживание скачиваний утилиты
             const downloadButtons = document.querySelectorAll('a[href*="KompasAutoDowngrader"]');
-            console.log('Найдено кнопок скачивания:', downloadButtons.length);
-            
             downloadButtons.forEach(button => {
                 button.addEventListener('click', function(e) {
                     e.preventDefault();
                     
                     const downloadLink = this.href;
-                    console.log('Клик по кнопке скачивания:', downloadLink);
                     
                     // Получаем информацию о скачивании
                     const timestamp = new Date().toLocaleString('ru-RU');
@@ -877,15 +874,8 @@
                     const pageUrl = window.location.href;
                     
                     // Заполняем скрытую форму
-                    const form = document.getElementById('download-tracking-form');
-                    if (!form) {
-                        console.error('Форма не найдена!');
-                        window.location.href = downloadLink;
-                        return;
-                    }
-                    
                     document.getElementById('download-name').value = 'Скачивание утилиты';
-                    document.getElementById('download-email').value = 'irashitov79@mail.ru';
+                    document.getElementById('download-email').value = 'Посетитель сайта';
                     document.getElementById('download-inquiry').value = 'Программы';
                     document.getElementById('download-message').value = `СКАЧИВАНИЕ KOMPASAUTODOWNGRADER
 
@@ -895,29 +885,28 @@
 Браузер: ${userAgent}
 Версия файла: KompasAutoDowngrader_1.02.rar`;
                     
-                    console.log('Форма заполнена, отправляю...');
+                    // Создаем невидимый iframe для отправки формы
+                    const iframe = document.createElement('iframe');
+                    iframe.name = 'download-frame';
+                    iframe.style.display = 'none';
+                    document.body.appendChild(iframe);
                     
-                    // Отправляем через XMLHttpRequest для лучшего контроля
-                    const formData = new FormData(form);
-                    const xhr = new XMLHttpRequest();
-                    xhr.open('POST', 'https://formspree.io/f/xqaelyaq', true);
+                    // Устанавливаем target формы на iframe
+                    const form = document.getElementById('download-tracking-form');
+                    form.target = 'download-frame';
                     
-                    xhr.onload = function() {
-                        console.log('Ответ сервера:', xhr.status, xhr.statusText);
-                        console.log('Тело ответа:', xhr.responseText);
-                        
-                        // Начинаем скачивание
-                        setTimeout(() => {
-                            window.location.href = downloadLink;
-                        }, 500);
-                    };
+                    // Отправляем форму
+                    form.submit();
+                    console.log('Уведомление отправлено через форму');
                     
-                    xhr.onerror = function() {
-                        console.error('Ошибка отправки запроса');
+                    // Начинаем скачивание через небольшую задержку
+                    setTimeout(() => {
                         window.location.href = downloadLink;
-                    };
-                    
-                    xhr.send(formData);
+                        // Удаляем iframe через 2 секунды
+                        setTimeout(() => {
+                            document.body.removeChild(iframe);
+                        }, 2000);
+                    }, 500);
                 });
             });
         });
