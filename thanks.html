@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спасибо за обращение! | И31 Инжиниринг</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .thanks-container {
+            background: white;
+            border-radius: 20px;
+            padding: 60px 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+            animation: slideUp 0.6s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .checkmark-circle {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 30px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: scaleIn 0.5s ease-out 0.3s backwards;
+        }
+        
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+        
+        .checkmark {
+            width: 50px;
+            height: 50px;
+            border: 5px solid white;
+            border-top: none;
+            border-right: none;
+            transform: rotate(-45deg);
+            margin-top: -10px;
+            animation: checkmark 0.4s ease-out 0.6s backwards;
+        }
+        
+        @keyframes checkmark {
+            from {
+                width: 0;
+                height: 0;
+            }
+            to {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        
+        h1 {
+            color: #2c6c9c;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .subtitle {
+            color: #4CAF50;
+            font-size: 1.3em;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+        
+        p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border-left: 4px solid #2c6c9c;
+        }
+        
+        .contact-info p {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .contact-info strong {
+            color: #2c6c9c;
+        }
+        
+        .btn-home {
+            display: inline-block;
+            background: linear-gradient(45deg, #2c6c9c, #1a5a8a);
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(44, 108, 156, 0.3);
+        }
+        
+        .btn-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(44, 108, 156, 0.4);
+            background: linear-gradient(45deg, #1a5a8a, #2c6c9c);
+        }
+        
+        .timer {
+            color: #999;
+            font-size: 0.9em;
+            margin-top: 20px;
+        }
+        
+        .logo {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            color: #2c6c9c;
+        }
+        
+        .logo span:first-child {
+            font-weight: bold;
+        }
+        
+        @media (max-width: 600px) {
+            .thanks-container {
+                padding: 40px 25px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .subtitle {
+                font-size: 1.1em;
+            }
+            
+            p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="thanks-container">
+        <div class="logo">
+            <span>И31</span> <span style="color: #888;">Инжиниринг</span>
+        </div>
+        
+        <div class="checkmark-circle">
+            <div class="checkmark"></div>
+        </div>
+        
+        <h1>Спасибо!</h1>
+        <p class="subtitle">Ваше сообщение успешно отправлено</p>
+        
+        <p>Я получил Ваше обращение и обязательно свяжусь с Вами в ближайшее время.</p>
+        <p>Обычно я отвечаю в течение 24 часов в рабочие дни.</p>
+        
+        <div class="contact-info">
+            <p><strong>📞 Телефон/WhatsApp:</strong> +7 (937) 787-62-31</p>
+            <p><strong>📧 Email:</strong> irashitov79@mail.ru</p>
+            <p><strong>🕐 График работы:</strong> Пн-Пт 09:00-18:00</p>
+        </div>
+        
+        <a href="/" class="btn-home">Вернуться на главную</a>
+        
+        <p class="timer">Автоматический переход через <span id="countdown">10</span> секунд...</p>
+    </div>
+    
+    <script>
+        // Таймер обратного отсчета
+        let seconds = 10;
+        const countdownElement = document.getElementById('countdown');
+        
+        const timer = setInterval(() => {
+            seconds--;
+            countdownElement.textContent = seconds;
+            
+            if (seconds <= 0) {
+                clearInterval(timer);
+                window.location.href = '/';
+            }
+        }, 1000);
+        
+        // Отправка уведомления в Яндекс.Метрику (если установлена)
+        if (typeof ym !== 'undefined') {
+            ym(99955334, 'reachGoal', 'form_submit');
+        }
+    </script>
+</body>
+</html>
