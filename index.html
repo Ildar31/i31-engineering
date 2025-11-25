@@ -808,15 +808,6 @@
         </div>
     </section>
 
-    <!-- Скрытая форма для отслеживания скачиваний -->
-    <form id="download-tracking-form" action="https://formspree.io/f/xkgpldvr" method="POST" style="display: none;">
-        <input type="hidden" name="_subject" value="Скачивание KompasAutoDowngrader">
-        <input type="text" name="name" id="download-name" value="">
-        <input type="email" name="email" id="download-email" value="">
-        <input type="text" name="inquiry" id="download-inquiry" value="">
-        <textarea name="message" id="download-message"></textarea>
-    </form>
-
     <footer class="tm-footer">
         <span>И31 Инжиниринг 2025</span>
         <iframe src="https://yandex.ru/sprav/widget/rating-badge/61853759723?type=rating" width="150" height="50" frameborder="0" title="Рейтинг И31 Инжиниринг на Яндексе"></iframe>
@@ -862,51 +853,21 @@
             // Отслеживание скачиваний утилиты
             const downloadButtons = document.querySelectorAll('a[href*="KompasAutoDowngrader"]');
             downloadButtons.forEach(button => {
-                button.addEventListener('click', function(e) {
-                    e.preventDefault();
+                button.addEventListener('click', function() {
+                    // Яндекс.Метрика
+                    if (typeof ym !== 'undefined') {
+                        ym(99955334, 'reachGoal', 'KAD_DOWNLOAD');
+                    }
                     
-                    const downloadLink = this.href;
+                    // Google Analytics
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'download', {
+                            'event_category': 'software',
+                            'event_label': 'KompasAutoDowngrader_v1.02'
+                        });
+                    }
                     
-                    // Получаем информацию о скачивании
-                    const timestamp = new Date().toLocaleString('ru-RU');
-                    const userAgent = navigator.userAgent;
-                    const referrer = document.referrer || 'Прямой переход';
-                    const pageUrl = window.location.href;
-                    
-                    // Заполняем скрытую форму
-                    document.getElementById('download-name').value = 'Скачивание утилиты';
-                    document.getElementById('download-email').value = 'test@example.com';
-                    document.getElementById('download-inquiry').value = 'Программы';
-                    document.getElementById('download-message').value = `Скачивание KompasAutoDowngrader
-
-Время: ${timestamp}
-Страница: ${pageUrl}
-Источник перехода: ${referrer}
-Браузер: ${userAgent}
-Версия файла: KompasAutoDowngrader_1.02.rar`;
-                    
-                    // Создаем невидимый iframe для отправки формы
-                    const iframe = document.createElement('iframe');
-                    iframe.name = 'download-frame';
-                    iframe.style.display = 'none';
-                    document.body.appendChild(iframe);
-                    
-                    // Устанавливаем target формы на iframe
-                    const form = document.getElementById('download-tracking-form');
-                    form.target = 'download-frame';
-                    
-                    // Отправляем форму
-                    form.submit();
-                    console.log('Уведомление отправлено через форму');
-                    
-                    // Начинаем скачивание через небольшую задержку
-                    setTimeout(() => {
-                        window.location.href = downloadLink;
-                        // Удаляем iframe через 2 секунды
-                        setTimeout(() => {
-                            document.body.removeChild(iframe);
-                        }, 2000);
-                    }, 500);
+                    console.log('Скачивание KompasAutoDowngrader отслежено');
                 });
             });
         });
