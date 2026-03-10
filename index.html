@@ -760,9 +760,9 @@
                             </a>
                         </li>
                         <li>
-                            <a href="mailto:irashitov79@mail.ru">
+                            <a href="/cdn-cgi/l/email-protection#bad3c8dbc9d2d3ced5cc8d83fad7dbd3d694c8cf">
                                 <i class="fas fa-at tm-contact-link-icon"></i>
-                                Email: irashitov79@mail.ru
+                                Email: <span class="__cf_email__" data-cfemail="dfb6adbeacb7b6abb0a9e8e69fb2beb6b3f1adaa">[email&#160;protected]</span>
                             </a>
                         </li>
                         <li>
@@ -803,8 +803,82 @@
                 <p style="margin-top: 15px; font-size: 0.9em; color: white;">Версия 1.0.0 | Размер: 24.9 MB | Windows 10/11 | КОМПАС-3D v19+</p>
             </div>
 
+            <!-- Промо-ролик KompasAutoDrawAI -->
+            <div style="margin-top: 50px; margin-bottom: 40px;">
+                <h3 style="color: #2c6c9c; font-size: 1.6em; border-bottom: 2px solid #2c6c9c; padding-bottom: 10px; margin-bottom: 20px;">
+                    🤖 KompasAutoDrawAI — новейшая версия с искусственным интеллектом
+                </h3>
+                <p style="font-size: 1.05em; line-height: 1.7; margin-bottom: 25px;">
+                    Посмотрите промо-ролик KompasAutoDrawAI — следующего поколения утилиты, оснащённого искусственным интеллектом. Выберите удобную платформу для просмотра:
+                </p>
+
+                <!-- Табы для выбора платформы -->
+                <div style="display: flex; gap: 12px; margin-bottom: 20px; flex-wrap: wrap;">
+                    <button onclick="switchVideo('rutube')" id="tab-rutube"
+                        style="padding: 10px 22px; border-radius: 6px; border: 2px solid #2c6c9c; background: #2c6c9c; color: white; font-weight: bold; font-size: 1em; cursor: pointer; transition: all 0.2s;">
+                        ▶ Rutube
+                    </button>
+                    <button onclick="switchVideo('youtube')" id="tab-youtube"
+                        style="padding: 10px 22px; border-radius: 6px; border: 2px solid #FF0000; background: white; color: #FF0000; font-weight: bold; font-size: 1em; cursor: pointer; transition: all 0.2s;">
+                        ▶ YouTube
+                    </button>
+                </div>
+
+                <!-- Rutube плеер (показан по умолчанию) -->
+                <div id="video-rutube" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 6px 24px rgba(0,0,0,0.18); border: 3px solid #2c6c9c;">
+                    <iframe
+                        src="https://rutube.ru/play/embed/fc3831c33356aeac80fb3e2742dd0af6/"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                        allow="clipboard-write; autoplay"
+                        allowfullscreen
+                        loading="lazy"
+                        title="KompasAutoDrawAI — промо-ролик на Rutube">
+                    </iframe>
+                </div>
+
+                <!-- YouTube плеер (скрыт по умолчанию) -->
+                <div id="video-youtube" style="display: none; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 6px 24px rgba(0,0,0,0.18); border: 3px solid #FF0000;">
+                    <iframe 
+                        src="https://www.youtube.com/embed/aqD0e3FteAc?rel=0&modestbranding=1" 
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                        loading="lazy"
+                        title="KompasAutoDrawAI — промо-ролик с искусственным интеллектом">
+                    </iframe>
+                </div>
+            </div>
+
+            <script>
+                function switchVideo(platform) {
+                    var yt = document.getElementById('video-youtube');
+                    var rt = document.getElementById('video-rutube');
+                    var tabYt = document.getElementById('tab-youtube');
+                    var tabRt = document.getElementById('tab-rutube');
+                    if (platform === 'youtube') {
+                        yt.style.display = 'block';
+                        rt.style.display = 'none';
+                        tabYt.style.background = '#FF0000';
+                        tabYt.style.color = 'white';
+                        tabYt.style.borderColor = '#FF0000';
+                        tabRt.style.background = 'white';
+                        tabRt.style.color = '#2c6c9c';
+                        tabRt.style.borderColor = '#2c6c9c';
+                    } else {
+                        yt.style.display = 'none';
+                        rt.style.display = 'block';
+                        tabRt.style.background = '#2c6c9c';
+                        tabRt.style.color = 'white';
+                        tabRt.style.borderColor = '#2c6c9c';
+                        tabYt.style.background = 'white';
+                        tabYt.style.color = '#FF0000';
+                        tabYt.style.borderColor = '#FF0000';
+                    }
+                }
+            </script>
+
             <!-- Измененный текст - убрано "PRO версии" -->
-            <p style="font-size: 1.1em; line-height: 1.6; margin-top: 40px;">По вопросам приобретения, технической поддержки или сотрудничества, <strong><a href="tel:+79377876231" style="color: #2c6c9c; text-decoration: underline;">звоните по телефону +7 (937) 787-62-31</a></strong> или <strong><a href="mailto:irashitov79@mail.ru" style="color: #2c6c9c; text-decoration: underline;">пишите на email irashitov79@mail.ru</a></strong>.</p>
+            <p style="font-size: 1.1em; line-height: 1.6; margin-top: 40px;">По вопросам приобретения, технической поддержки или сотрудничества, <strong><a href="tel:+79377876231" style="color: #2c6c9c; text-decoration: underline;">звоните по телефону +7 (937) 787-62-31</a></strong> или <strong><a href="/cdn-cgi/l/email-protection#cca5beadbfa4a5b8a3bafbf58ca1ada5a0e2beb9" style="color: #2c6c9c; text-decoration: underline;">пишите на email <span class="__cf_email__" data-cfemail="650c1704160d0c110a13525c2508040c094b1710">[email&#160;protected]</span></a></strong>.</p>
         </div>
     </section>
 
@@ -813,7 +887,7 @@
         <iframe src="https://yandex.ru/sprav/widget/rating-badge/61853759723?type=rating" width="150" height="50" frameborder="0" title="Рейтинг И31 Инжиниринг на Яндексе"></iframe>
     </footer>
 
-    <script src="js/jquery-3.4.1.min.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/imagesloaded.pkgd.min.js"></script>
     <script src="js/isotope.pkgd.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
@@ -1119,16 +1193,4 @@
         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
         ym(99955334,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
     </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/99955334" style="position:absolute; left:-9999px;" alt="Счетчик Яндекс Метрики"></div></noscript>
-    
-    <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      if (location.hash === "#contact") {
-        setTimeout(() => {
-          document.querySelector('a[href="#contact"]')?.click();
-        }, 500);
-      }
-    });
-    </script>
-</body>
-</html>
+    <noscript><div><img src="https://mc.yandex.ru/watch/99955334" style="positio
