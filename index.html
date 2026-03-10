@@ -225,24 +225,26 @@
             font-size: 1.1em;
             transition: all 0.3s ease;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            color: white! important; /* Текст белый */
             min-width: 180px;
+            text-align: center;
         }
         .video-btn.rutube {
             background: linear-gradient(45deg, #0066CC, #0055AA);
-            color: white;
         }
         .video-btn.youtube {
             background: linear-gradient(45deg, #FF0000, #CC0000);
-            color: white;
         }
         .video-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+            color: white !important; /* И при наведении тоже БЕЛЫЙ */
         }
         .video-description {
             font-size: 1.1em;
             color: #333;
             margin-bottom: 15px;
+            line-height: 1.5;
         }
         .video-tag {
             display: inline-block;
@@ -262,10 +264,36 @@
             .video-buttons {
                 flex-direction: column;
                 align-items: center;
+                gap: 15px;
+                width: 100%;
             }
             .video-btn {
                 width: 100%;
-                max-width: 250px;
+                max-width: 300px;
+                padding: 14px 20px;
+                font-size: 1em;
+                min-width: unset;
+                box-sizing: border-box;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .video-section {
+                padding: 20px 15px;
+            }
+            .video-btn {
+                max-width: 100%;
+                padding: 14px 15px;
+                width: 100%;
+            }
+            .video-description {
+                font-size: 1em;
+            }
+            .video-section h3 {
+                font-size: 1.3em;
+            }
+            .video-buttons {
+                width: 100%;
             }
         }
     </style>
@@ -880,7 +908,7 @@
             <div class="video-section">
                 <h3>🤖 KompasAutoDrawAI - Новейшая разработка с искусственным интеллектом</h3>
                 <div class="video-tag">⚡ НОВИНКА ⚡</div>
-                <p class="video-description">Промо-ролик утилиты нового поколения, оснащенной искусственным интеллектом для еще более умного создания чертежей</p>
+                <p class="video-description">Посмотрите промо-ролик KompasAutoDrawAI — следующего поколения утилиты, оснащённого искусственным интеллектом. Выберите удобную платформу для просмотра:</p>
                 <div class="video-buttons">
                     <a href="https://rutube.ru/video/fc3831c33356aeac80fb3e2742dd0af6" target="_blank" rel="noopener" class="video-btn rutube">
                         ▶ Смотреть на Rutube
