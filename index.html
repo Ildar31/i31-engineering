@@ -107,6 +107,28 @@
             box-shadow: 0 6px 12px rgba(0,0,0,0.3);
             background: linear-gradient(45deg, #45a049, #4CAF50);
         }
+        /* Новая кнопка для AI версии (синий градиент) */
+        .download-btn-ai {
+            display: inline-block;
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin: 15px 0;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border: none;
+            cursor: pointer;
+        }
+        .download-btn-ai:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+            background: linear-gradient(45deg, #0056b3, #007bff);
+            color: white;
+        }
         .utility-features {
             list-style: none;
             padding-left: 0;
@@ -919,6 +941,16 @@
                 </div>
             </div>
 
+            <!-- ***** НОВЫЙ БЛОК: КНОПКА СКАЧИВАНИЯ ДИСТРИБУТИВА+ПРАЙСА KompasAutoDrawAI ***** -->
+            <div style="text-align: center; margin: 40px 0 30px 0;">
+                <h3 style="color: #2c6c9c;">Скачать KompasAutoDrawAI с ИИ (дистрибутив + прайс-лист)</h3>
+                <a href="downloads/KompasAutoDrawAI_v1.1.0_licensed.rar" class="download-btn-ai" style="color: white !important;">
+                    📥 Скачать архив (26.5 MB)
+                </a>
+                <p style="font-size: 0.9em; margin-top: 10px; color: #555;">Полная лицензионная версия с искусственным интеллектом + прайс</p>
+            </div>
+            <!-- *********************************************************************** -->
+
             <!-- Измененный текст - убрано "PRO версии" -->
             <p style="font-size: 1.1em; line-height: 1.6; margin-top: 40px;">По вопросам приобретения, технической поддержки или сотрудничества, <strong><a href="tel:+79377876231" style="color: #2c6c9c; text-decoration: underline;">звоните по телефону +7 (937) 787-62-31</a></strong> или <strong><a href="mailto:irashitov79@mail.ru" style="color: #2c6c9c; text-decoration: underline;">пишите на email irashitov79@mail.ru</a></strong>.</p>
         </div>
@@ -1023,6 +1055,15 @@
                     trackDownload(e, 'KRC_DOWNLOAD');
                 });
             });
+            
+            // ***** НОВОЕ: отслеживание скачиваний KompasAutoDrawAI *****
+            const aiButton = document.getElementById('download-ai-btn');
+            if (aiButton) {
+                aiButton.addEventListener('click', function(e) {
+                    trackDownload(e, 'KADRAWAI_DOWNLOAD');
+                });
+            }
+            // *******************************************************
             
             // Всплывающая картинка для KompasAutoDraw Free
             const autodrawBtn = document.querySelector('a.autodraw-trigger');
