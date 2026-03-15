@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KompasAutoDraw Free - Автоматическое создание чертежей в КОМПАС-3D | И31 Инжиниринг</title>
-    <meta name="description" content="🚀 KompasAutoDraw Free - бесплатная утилита для автоматического создания чертежей из 3D моделей КОМПАС-3D. 4 вида, автоподбор формата и масштаба, простановка размеров, заполнение штампа. Скачать бесплатно.">
-    <meta name="keywords" content="kompasautodraw, компас авточертеж, автоматические чертежи компаса, создание чертежей из 3d моделей, компас 3d утилита, компас автоматизация, kompas drawing generator">
+    <title>KompasAutoDrawAI — чертежи с ИИ в КОМПАС-3D | И31 Инжиниринг</title>
+    <meta name="description" content="🤖 KompasAutoDrawAI — автоматическое создание чертежей в КОМПАС-3D с искусственным интеллектом. Анализ модели, заполнение штампа, чат-ассистент. Скачать пробную версию с ИИ.">
+    <meta name="keywords" content="kompasautodrawai, компас авточертеж ии, создание чертежей с ии, компас 3d ии ассистент, автоматические чертежи компас, нейросеть для компаса, kompas ai drawing generator">
     <meta name="author" content="Ильдар Рашитов">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     
     <!-- Дополнительные мета-теги для утилит -->
-    <meta name="software_name" content="KompasAutoDraw Free">
-    <meta name="software_version" content="1.0.0">
-    <meta name="software_type" content="Desktop Utility">
+    <meta name="software_name" content="KompasAutoDrawAI">
+    <meta name="software_version" content="1.1.0">
+    <meta name="software_type" content="Desktop Utility with AI">
     <meta name="operating_system" content="Windows">
     <meta name="file_formats" content=".m3d, .a3d, .cdw">
     
@@ -22,23 +22,22 @@
     <meta name="ICBM" content="54.675821, 53.794709">
     <meta name="language" content="ru">
     <meta http-equiv="Content-Language" content="ru">
-    <link rel="canonical" href="https://i31-engineering.ru/kompasautodraw">
-    <meta property="og:title" content="KompasAutoDraw Free - Автоматическое создание чертежей в КОМПАС-3D">
-    <meta property="og:description" content="Бесплатная утилита для автоматического создания чертежей из 3D моделей КОМПАС-3D. Скачайте KompasAutoDraw Free 1.0.0">
-    <meta property="og:image" content="https://i31-engineering.ru/img/kompasautodraw-preview.jpg">
+    <link rel="canonical" href="https://i31-engineering.ru/kompasautodrawai">
+    <meta property="og:title" content="KompasAutoDrawAI — чертежи с ИИ в КОМПАС-3D">
+    <meta property="og:description" content="Автоматическое создание чертежей с искусственным интеллектом. Анализ модели, чат-ассистент, заполнение штампа.">
+    <meta property="og:image" content="https://i31-engineering.ru/img/kompasautodrawai-preview.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="KompasAutoDraw Free - интерфейс утилиты">
-    <meta property="og:url" content="https://i31-engineering.ru/kompasautodraw">
+    <meta property="og:image:alt" content="KompasAutoDrawAI - интерфейс с ИИ">
+    <meta property="og:url" content="https://i31-engineering.ru/kompasautodrawai">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ru_RU">
     <meta property="og:site_name" content="И31 Инжиниринг">
     
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="KompasAutoDraw Free - Автоматическое создание чертежей">
-    <meta name="twitter:description" content="Бесплатная утилита для автоматического создания чертежей из 3D моделей КОМПАС-3D">
-    <meta name="twitter:image" content="https://i31-engineering.ru/img/kompasautodraw-preview.jpg">
-    <meta name="twitter:image:alt" content="KompasAutoDraw Free - интерфейс утилиты">
+    <meta name="twitter:title" content="KompasAutoDrawAI — чертежи с ИИ в КОМПАС-3D">
+    <meta name="twitter:description" content="Автоматическое создание чертежей с искусственным интеллектом. Анализ модели, чат-ассистент, заполнение штампа.">
+    <meta name="twitter:image" content="https://i31-engineering.ru/img/kompasautodrawai-preview.jpg">
     
     <link rel="preload" href="css/templatemo-ocean-vibes.css" as="style">
     <link rel="preload" href="fontawesome/css/all.min.css" as="style">
@@ -89,7 +88,7 @@
             border-bottom: 2px solid #2c6c9c;
             padding-bottom: 10px;
         }
-        .utility-download .download-btn {
+        .download-btn {
             display: inline-block;
             background: linear-gradient(45deg, #4CAF50, #45a049);
             color: white;
@@ -102,12 +101,13 @@
             font-size: 1.1em;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
-        .utility-download .download-btn:hover {
+        .download-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 12px rgba(0,0,0,0.3);
             background: linear-gradient(45deg, #45a049, #4CAF50);
+            color: white;
         }
-        /* Новая кнопка для AI версии (синий градиент) */
+        /* Кнопка для AI версии (синий градиент) */
         .download-btn-ai {
             display: inline-block;
             background: linear-gradient(45deg, #007bff, #0056b3);
@@ -260,7 +260,7 @@
         .video-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-            color: white !important; /* И при наведении тоже БЕЛЫЙ */
+            color: white !important;
         }
         .video-description {
             font-size: 1.1em;
@@ -318,13 +318,23 @@
                 width: 100%;
             }
         }
+        /* Стиль для второстепенного блока Free */
+        .utility-download-free {
+            background: #f1f3f4;
+            border: 2px solid #6c757d;
+            opacity: 0.9;
+        }
+        .utility-download-free h3 {
+            color: #6c757d;
+            border-bottom-color: #6c757d;
+        }
     </style>
 </head>
 <body>
     <!-- Контейнеры для всплывающих картинок - увеличенные размеры -->
     <div id="autodraw-popup" class="image-popup" style="display: none; position: fixed; z-index: 9999; pointer-events: none;">
-        <img src="img/KompasAutoDrawFree.jpg" alt="KompasAutoDraw Free - интерфейс утилиты" 
-             style="width: min(750px, 90vw); border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); border: 3px solid #FFD700;">
+        <img src="img/KompasAutoDrawAI.jpg" alt="KompasAutoDrawAI - интерфейс утилиты" 
+             style="width: min(1050px, 90vw); border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); border: 3px solid #FFD700;">
     </div>
     
     <div id="downgrader-popup" class="image-popup" style="display: none; position: fixed; z-index: 9999; pointer-events: none;">
@@ -344,16 +354,16 @@
                 <em class="tm-tagline tm-color-light-gray">РАЗРАБОТКА ТЕХНИЧЕСКОЙ ДОКУМЕНТАЦИИ</em>
             </div>
             <div style="display: flex; gap: 10px; margin-left: auto; flex-wrap: wrap; align-items: center;">
-                <!-- Кнопка KompasAutoDraw Free - ЗЕЛЕНАЯ -->
-                <a href="downloads/KompasAutoDrawFree.rar" download class="autodraw-trigger"
+                <!-- Кнопка KompasAutoDrawAI - СИНЯЯ -->
+                <a href="downloads/KompasAutoDrawAI_v1.1.0_licensed.rar" download class="autodraw-ai-trigger"
                    style="display: flex; flex-direction: column; justify-content: center; align-items: center;
-                          background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%); 
+                          background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); 
                           color: white; padding: 6px 15px; border-radius: 8px; text-decoration: none; 
                           font-weight: bold; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: all 0.3s ease;
                           border: 2px solid #FFD700; min-width: 150px; height: 60px; text-align: center;
                           line-height: 1;">
-                    <div style="font-size: 0.9em; color: #FFD700; margin: 0; padding: 0; line-height: 1;">📐 AUTODRAW</div>
-                    <div style="font-size: 0.8em; margin: 0; padding: 0; line-height: 1.1;">Авточертежи<br>из 3D моделей</div>
+                    <div style="font-size: 0.9em; color: #FFD700; margin: 0; padding: 0; line-height: 1;">🤖 AUTODRAW AI</div>
+                    <div style="font-size: 0.8em; margin: 0; padding: 0; line-height: 1.1;">Чертежи с ИИ<br>из 3D моделей</div>
                 </a>
                 
                 <!-- Кнопка KompasRALColor Free - ОРАНЖЕВАЯ -->
@@ -380,7 +390,7 @@
                     <div style="font-size: 0.8em; margin: 0; padding: 0; line-height: 1.1;">Конвертер<br>в ранние версии</div>
                 </a>
                 
-                <!-- Баннер 1 - Внимание для КОМПАС (ФИОЛЕТОВЫЙ - без изменений) -->
+                <!-- Баннер 1 - Внимание для КОМПАС -->
                 <a href="https://fixcad.ru" target="_blank" rel="noopener" 
                    style="display: flex; flex-direction: column; justify-content: center; align-items: center;
                           background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
@@ -393,7 +403,7 @@
                     <div style="font-size: 0.8em; opacity: 0.9; margin: 0; padding: 0; line-height: 1;">пользователей</div>
                 </a>
                 
-                <!-- Баннер 2 - Скачать готовые файлы (ФИОЛЕТОВЫЙ - без изменений) -->
+                <!-- Баннер 2 - Скачать готовые файлы -->
                 <a href="https://fixcad.ru" target="_blank" rel="noopener" 
                    style="display: flex; flex-direction: column; justify-content: center; align-items: center;
                           background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
@@ -475,18 +485,28 @@
                             <p><strong>4. Студенческие работы:</strong></p>
                             <p>- выполнение курсовых, рефератов и других работ по инженерным дисциплинам с учётом всех требований.</p>
 
-                            <!-- Добавлен блок с утилитой KompasAutoDraw Free (ГЛАВНЫЙ) -->
+                            <!-- ГЛАВНЫЙ БЛОК: KompasAutoDrawAI v1.1.0 -->
                             <div class="utility-download">
-                                <h3>📐 KompasAutoDraw Free v1.0.0 <span class="version-badge">НОВИНКА</span></h3>
-                                <p><strong>Автоматическое создание чертежей из 3D моделей КОМПАС-3D</strong></p>
+                                <h3>🤖 KompasAutoDrawAI v1.1.0 <span class="version-badge">ИСКУССТВЕННЫЙ ИНТЕЛЛЕКТ</span></h3>
+                                <p><strong>Автоматическое создание чертежей из 3D моделей КОМПАС-3D с помощью ИИ</strong></p>
                                 
-                                <a href="downloads/KompasAutoDrawFree.rar" class="download-btn" download>
-                                    📥 Скачать KompasAutoDrawFree.rar (24.9 MB)
+                                <a href="downloads/KompasAutoDrawAI_v1.1.0_licensed.rar" class="download-btn-ai" style="color: white !important;" download>
+                                    📥 Скачать пробную версию с ИИ (26.5 MB)
                                 </a>
                                 
-                                <p><strong>Возможности утилиты:</strong></p>
+                                <p><strong>Возможности AI версии (в дополнение к базовым):</strong></p>
                                 <ul class="utility-features">
-                                    <li>Автоматическое создание чертежей для компонентов сборки</li>
+                                    <li>🧠 Интеллектуальный анализ 3D-модели — ИИ оценивает состав, готовность документации, выявляет проблемные компоненты</li>
+                                    <li>📋 Автозаполнение основной надписи по данным модели, или на основе требований пользователя — ИИ предлагает значения полей (организация, разработчик, проверяющий и т. д.)</li>
+                                    <li>💬 Чат-ассистент по ГОСТ, КОМПАС-3D и работе с утилитой (отвечает на любые технические (и не только) вопросы)</li>
+                                    <li>📜 Долговременная память чата — запоминает факты об организации, проекте, сотрудниках - и использует эту информацию при анализе проекта</li>
+                                    <li>📊 HTML-отчёт с детализацией по каждому чертежу</li>
+                                    <li>🔧 Профили основной надписи — сохранение реквизитов разных организаций или проектов</li>
+                                    <li>⚙️ Гибкие настройки ИИ: выбор AI-модели из списка, или ручной ввод любой доступной современной</li>
+                                </ul>
+                                
+                                <p><strong>Базовые возможности (как в Free версии):</strong></p>
+                                <ul class="utility-features">
                                     <li>4 вида: Спереди, Слева, Сверху, Изометрия</li>
                                     <li>Автоподбор формата листа от А4 до А0</li>
                                     <li>Автоподбор масштаба по ГОСТ 2.302-68</li>
@@ -494,10 +514,7 @@
                                     <li>Заполнение основной надписи по ГОСТ 2.104</li>
                                     <li>Визуальный редактор штампа как в КОМПАС</li>
                                     <li>Цветовая подсветка компонентов по типу</li>
-                                    <li>Фильтрация: сборочные единицы, детали, стандартные изделия</li>
-                                    <li>Ограничение FREE версии: до 10 чертежей за запуск</li>
-                                    <li>Сохранение настроек между сеансами</li>
-                                    <li>Не требует установки — portable EXE</li>
+                                    <li>Фильтрация: сборочные единицы, детали, стандартные изделия и т. д.</li>
                                 </ul>
                                 
                                 <div class="system-requirements">
@@ -505,27 +522,26 @@
                                     <ul>
                                         <li><strong>ОС:</strong> Windows 10/11 (64-бит)</li>
                                         <li><strong>КОМПАС-3D:</strong> v19 или выше</li>
-                                        <li><strong>Память:</strong> 4 GB RAM минимум (рекомендуется 8 GB)</li>
-                                        <li><strong>Место на диске:</strong> 30 MB</li>
-                                        <li><strong>Дополнительно:</strong> Для FREE версии ограничение 10 чертежей</li>
+                                        <li><strong>Память:</strong> 8 GB RAM (рекомендуется не менее 16 GB для локальных ИИ-моделей)</li>
+                                        <li><strong>Место на диске:</strong> 90 MB утилита + 5,2 GB Ollama + место для моделей Ollama (облачные почти не занимают места, для локальных потребуется 1–6 ГБ)</li>
+                                        <li><strong>Интернет:</strong> для загрузки моделей и использования облачных ИИ</li>
                                     </ul>
                                 </div>
                                 
-                                <p><strong>Как использовать:</strong></p>
+                                <p><strong>Как использовать AI версию:</strong></p>
                                 <ol>
-                                    <li>Откройте 3D модель в КОМПАС-3D и сохраните её (Ctrl+S)</li>
-                                    <li>Запустите KompasAutoDraw Free</li>
+                                    <li>Установите <b>Ollama</b> (инструкция в настройках ИИ) и загрузите модель (например, рекомендуемую <code>glm-5:cloud</code>)</li>
+                                    <li>Запустите KompasAutoDrawAI</li>
+                                    <li>Откройте 3D модель в КОМПАС-3D</li>
                                     <li>Нажмите "Загрузить из активного документа"</li>
-                                    <li>Настройте фильтры, выберите нужные компоненты</li>
-                                    <li>Заполните данные основной надписи</li>
+                                    <li>Используйте ИИ-функции: анализ модели, заполнение штампа, чат</li>
                                     <li>Нажмите "Экспортировать выбранные в CDW"</li>
-                                    <li>Выберите папку для сохранения чертежей</li>
                                 </ol>
                                 
-                                <p><em>FREE версия: до 10 чертежей за запуск. Полная версия без ограничений: <a href="https://fixcad.ru" target="_blank" style="color: #2c6c9c; font-weight: bold;">fixcad.ru</a></em></p>
+                                <p><em>Пробная версия: полный функционал без ограничений в течение нескольких дней. Для приобретения постоянной лицензии обратитесь к разработчику.</em></p>
                             </div>
-                            
-                            <!-- Добавлен блок с утилитой KompasAutoDowngrader (перемещен на второе место) -->
+
+                            <!-- Блоки Downgrader и RAL Color -->
                             <div class="utility-download">
                                 <h3>⬇️ KompasAutoDowngrader v1.02</h3>
                                 <p><strong>Пакетный конвертер файлов КОМПАС-3D для сохранения в ранние версии</strong></p>
@@ -550,7 +566,6 @@
                                 <p><em>Подробнее на <a href="https://i31-engineering.ru/kompasautodowngrader" style="color: #2c6c9c;">странице утилиты</a></em></p>
                             </div>
                             
-                            <!-- Добавлен блок с утилитой KompasRALColor Free (перемещен на третье место) -->
                             <div class="utility-download">
                                 <h3>🎨 KompasRALColor Free</h3>
                                 <p><strong>Утилита для автоматической раскраски 3D моделей в КОМПАС-3D по палитре RAL</strong></p>
@@ -573,6 +588,8 @@
                                 
                                 <p><em>Free версия включает 4 базовых цвета RAL. Полная версия со всеми цветами доступна на <a href="https://fixcad.ru" target="_blank" style="color: #2c6c9c;">fixcad.ru</a></em></p>
                             </div>
+
+                            <!-- Блок Free будет позже в SEO-контенте -->
 
                             <p>В случае отсутствия в приведенном перечне желаемых услуг, для решения задач могут быть привлечены проверенные партнёры, обладающие необходимыми компетенциями.</p>
                         </div>
@@ -901,32 +918,23 @@
         </div>
     </div>
 
-    <!-- Дополнительный SEO контент для продвижения утилит -->
+    <!-- Дополнительный SEO контент для продвижения AI версии -->
     <section id="seo-content" style="padding: 50px 20px; background: #f9f9f9; color: #333;">
         <div class="tm-container" style="max-width: 1200px; margin: 0 auto;">
-            <h1 style="color: #2c6c9c; margin-bottom: 30px; font-size: 2em;">KompasAutoDraw Free - Автоматизация создания чертежей в КОМПАС-3D</h1>
+            <h1 style="color: #2c6c9c; margin-bottom: 30px; font-size: 2em;">KompasAutoDrawAI — создание чертежей с искусственным интеллектом в КОМПАС-3D</h1>
             
-            <h2 style="color: #2c6c9c; margin: 40px 0 20px 0;">Экономьте часы работы при создании чертежей</h2>
-            <p style="font-size: 1.1em; line-height: 1.6; margin-bottom: 25px;">Подготовка комплекта чертежей вручную — это часы однообразной работы: открыть деталь, создать чертёж, расставить виды, подобрать масштаб, проставить размеры, заполнить штамп. <strong>KompasAutoDraw</strong> берёт эту рутину на себя. Вы выбираете нужные компоненты, нажимаете одну кнопку — и через несколько минут получаете готовый комплект чертежей. То, что раньше занимало полдня, теперь делается за время чашки кофе.</p>
+            <h2 style="color: #2c6c9c; margin: 40px 0 20px 0;">ИИ-ассистент, который понимает ГОСТ и экономит ваше время</h2>
+            <p style="font-size: 1.1em; line-height: 1.6; margin-bottom: 25px;">KompasAutoDrawAI — это эволюция автоматизации чертежей. В отличие от обычных утилит, он не просто расставляет виды и размеры, а анализирует всю сборку, даёт рекомендации по оформлению, заполняет штамп, общается с вами через чат и запоминает особенности вашего проекта. Всё, что раньше требовало опыта нормоконтролёра, теперь делается автоматически.</p>
             
-            <h3 style="color: #333; margin: 30px 0 15px 0;">Ключевые преимущества</h3>
+            <h3 style="color: #333; margin: 30px 0 15px 0;">Ключевые преимущества AI версии</h3>
             <ul style="line-height: 1.6; margin-bottom: 30px; padding-left: 20px;">
-                <li style="margin-bottom: 10px;"><strong>Экономия времени:</strong> Автоматическое создание чертежей для всех компонентов сборки</li>
-                <li style="margin-bottom: 10px;"><strong>Профессиональное качество:</strong> 4 вида (спереди, слева, сверху, изометрия) с автоподбором формата и масштаба</li>
-                <li style="margin-bottom: 10px;"><strong>ГОСТ соблюдён:</strong> Автоподбор масштаба по ГОСТ 2.302-68, заполнение штампа по ГОСТ 2.104</li>
-                <li style="margin-bottom: 10px;"><strong>Интуитивный интерфейс:</strong> Цветовая подсветка, фильтры, визуальный редактор штампа</li>
-                <li style="margin-bottom: 10px;"><strong>Бесплатная версия:</strong> До 10 чертежей за запуск для тестирования и небольших проектов</li>
+                <li style="margin-bottom: 10px;"><strong>🧠 Интеллектуальный анализ:</strong> ИИ оценивает состав модели, выявляет проблемные компоненты, проверяет соответствие ЕСКД.</li>
+                <li style="margin-bottom: 10px;"><strong>📋 Автозаполнение штампа:</strong> Мгновенно предлагает значения для полей "Разработал", "Проверил", "Организация" на основе контекста.</li>
+                <li style="margin-bottom: 10px;"><strong>💬 Чат-ассистент:</strong> Отвечает на вопросы по ГОСТ, КОМПАС-3D и работе утилиты, запоминает важные факты.</li>
+                <li style="margin-bottom: 10px;"><strong>🔧 Гибкие настройки:</strong> Выбор локальных или облачных моделей ИИ, настройка глубины истории и памяти.</li>
             </ul>
 
-            <!-- Измененный блок - фон фиолетовый, текст белый -->
-            <div style="text-align: center; margin-top: 40px; padding: 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 12px;">
-                <h3 style="color: white; margin-bottom: 20px;">Готовы автоматизировать создание чертежей?</h3>
-                <p style="font-size: 1.2em; margin-bottom: 25px; color: white;">Скачайте KompasAutoDraw Free прямо сейчас и начните экономить время!</p>
-                <a href="downloads/KompasAutoDrawFree.rar" style="display: inline-block; padding: 15px 35px; background: white; color: #667eea; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 1.1em; margin: 0 10px;" download>📥 Скачать бесплатно</a>
-                <p style="margin-top: 15px; font-size: 0.9em; color: white;">Версия 1.0.0 | Размер: 24.9 MB | Windows 10/11 | КОМПАС-3D v19+</p>
-            </div>
-
-            <!-- НОВЫЙ БЛОК: Промо-ролик KompasAutoDrawAI -->
+            <!-- Промо-ролик KompasAutoDrawAI с обновлёнными заголовками -->
             <div class="video-section">
                 <h3>🤖 KompasAutoDrawAI - Новейшая разработка с искусственным интеллектом</h3>
                 <div class="video-tag">⚡ НОВИНКА ⚡</div>
@@ -941,17 +949,25 @@
                 </div>
             </div>
 
-            <!-- ***** НОВЫЙ БЛОК: КНОПКА СКАЧИВАНИЯ ДИСТРИБУТИВА+ПРАЙСА KompasAutoDrawAI ***** -->
-            <div style="text-align: center; margin: 40px 0 30px 0;">
-                <h3 style="color: #2c6c9c;">Скачать KompasAutoDrawAI с ИИ</h3>
-                <a href="downloads/KompasAutoDrawAI_v1.1.0_licensed.rar" class="download-btn-ai" id="download-ai-btn" style="color: white !important;">
-                    📥 Скачать архив (26.5 MB)
+            <!-- Сначала фиолетовый блок с AI (наверху) -->
+            <div style="text-align: center; margin-top: 40px; padding: 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 12px;">
+                <h3 style="color: white; margin-bottom: 20px;">Готовы попробовать чертежи с искусственным интеллектом?</h3>
+                <p style="font-size: 1.2em; margin-bottom: 25px; color: white;">Скачайте пробную версию KompasAutoDrawAI — Без ограничений функционала!</p>
+                <a href="downloads/KompasAutoDrawAI_v1.1.0_licensed.rar" class="download-btn-ai" style="background: white; color: #667eea; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.3);" download>
+                    📥 Скачать пробную AI версию
                 </a>
-                <p style="font-size: 0.9em; margin-top: 10px; color: #555;">Пробная лицензионная версия с искусственным интеллектом</p>
+                <p style="margin-top: 15px; font-size: 0.9em; color: white;">Версия 1.1.0 | Размер: 26.5 MB | Windows 10/11 | КОМПАС-3D v19+</p>
             </div>
-            <!-- *********************************************************************** -->
 
-            <!-- Измененный текст - убрано "PRO версии" -->
+            <!-- Затем блок Free (ниже) -->
+            <div style="text-align: center; margin: 40px 0 30px 0;">
+                <h3 style="color: #6c757d;">Если искусственный интеллект не нужен - KompasAutoDraw Free (ограниченная базовая демо-версия без ИИ)</h3>
+                <a href="downloads/KompasAutoDrawFree.rar" class="download-btn" style="background: linear-gradient(45deg, #6c757d, #5a6268); color:white !important;" download>
+                    📥 Скачать Free версию (24.9 MB)
+                </a>
+                <p style="font-size: 0.9em; margin-top: 10px; color: #555;">Ограничение: обработка до 10 чертежей за запуск</p>
+            </div>
+
             <p style="font-size: 1.1em; line-height: 1.6; margin-top: 40px;">По вопросам приобретения, технической поддержки или сотрудничества, <strong><a href="tel:+79377876231" style="color: #2c6c9c; text-decoration: underline;">звоните по телефону +7 (937) 787-62-31</a></strong> или <strong><a href="mailto:irashitov79@mail.ru" style="color: #2c6c9c; text-decoration: underline;">пишите на email irashitov79@mail.ru</a></strong>.</p>
         </div>
     </section>
@@ -977,12 +993,10 @@
                     const answer = this.nextElementSibling;
                     const isVisible = answer.style.display === 'block';
                     
-                    // Закрываем все ответы
                     document.querySelectorAll('.faq-answer').forEach(ans => {
                         ans.style.display = 'none';
                     });
                     
-                    // Открываем/закрываем текущий ответ
                     answer.style.display = isVisible ? 'none' : 'block';
                 });
             });
@@ -1000,27 +1014,21 @@
             
             // Улучшенное отслеживание скачиваний
             function trackDownload(event, label) {
-                // Предотвращаем переход по ссылке на 100ms для отправки данных
                 event.preventDefault();
                 const href = event.target.closest('a').href;
                 
-                // Отправляем в Яндекс Метрику
                 if (typeof ym !== 'undefined') {
                     try {
                         ym(99955334, 'reachGoal', label, function() {
-                            // После успешной отправки переходим по ссылке
                             window.location.href = href;
                         });
                     } catch (e) {
-                        // Если ошибка, все равно переходим
                         window.location.href = href;
                     }
                 } else {
-                    // Если метрика не загрузилась, просто переходим
                     window.location.href = href;
                 }
                 
-                // Отправляем в Google Analytics если есть
                 if (typeof gtag !== 'undefined') {
                     gtag('event', 'download', {
                         'event_category': 'software',
@@ -1032,11 +1040,19 @@
                 console.log('Скачивание отслежено:', label);
             }
             
+            // Отслеживание скачиваний KompasAutoDrawAI
+            const aiButtons = document.querySelectorAll('a[href*="KompasAutoDrawAI"]');
+            aiButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    trackDownload(e, 'KADRAWAI_DOWNLOAD');
+                });
+            });
+            
             // Отслеживание скачиваний KompasAutoDraw Free
             const autodrawButtons = document.querySelectorAll('a[href*="KompasAutoDrawFree"]');
             autodrawButtons.forEach(button => {
                 button.addEventListener('click', function(e) {
-                    trackDownload(e, 'KADRAW_DOWNLOAD');
+                    trackDownload(e, 'KADRAW_FREE_DOWNLOAD');
                 });
             });
             
@@ -1056,26 +1072,16 @@
                 });
             });
             
-            // ***** НОВОЕ: отслеживание скачиваний KompasAutoDrawAI *****
-            const aiButton = document.getElementById('download-ai-btn');
-            if (aiButton) {
-                aiButton.addEventListener('click', function(e) {
-                    trackDownload(e, 'KADRAWAI_DOWNLOAD');
-                });
-            }
-            // *******************************************************
-            
-            // Всплывающая картинка для KompasAutoDraw Free
-            const autodrawBtn = document.querySelector('a.autodraw-trigger');
+            // Всплывающая картинка для KompasAutoDrawAI
+            const autodrawAiBtn = document.querySelector('a.autodraw-ai-trigger');
             const autodrawPopup = document.getElementById('autodraw-popup');
             
-            if (autodrawBtn && autodrawPopup) {
+            if (autodrawAiBtn && autodrawPopup) {
                 let popupTimeout;
                 
-                autodrawBtn.addEventListener('mouseenter', function(e) {
+                autodrawAiBtn.addEventListener('mouseenter', function(e) {
                     clearTimeout(popupTimeout);
                     
-                    // Позиционируем всплывашку рядом с курсором
                     const x = e.clientX + 20;
                     const y = e.clientY + 20;
                     
@@ -1083,7 +1089,6 @@
                     autodrawPopup.style.top = y + 'px';
                     autodrawPopup.style.display = 'block';
                     
-                    // Адаптируем позицию если выходит за границы экрана
                     setTimeout(() => {
                         const popupRect = autodrawPopup.getBoundingClientRect();
                         const screenWidth = window.innerWidth;
@@ -1103,8 +1108,7 @@
                     }, 10);
                 });
                 
-                autodrawBtn.addEventListener('mousemove', function(e) {
-                    // Следим за движением мыши
+                autodrawAiBtn.addEventListener('mousemove', function(e) {
                     const x = e.clientX + 20;
                     const y = e.clientY + 20;
                     
@@ -1112,7 +1116,7 @@
                     autodrawPopup.style.top = y + 'px';
                 });
                 
-                autodrawBtn.addEventListener('mouseleave', function() {
+                autodrawAiBtn.addEventListener('mouseleave', function() {
                     popupTimeout = setTimeout(() => {
                         autodrawPopup.style.display = 'none';
                     }, 300);
