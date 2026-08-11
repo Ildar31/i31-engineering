@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KompasAutoDrawAI — Автоматическое создание чертежей в КОМПАС-3D с помошью нейросетей | И31 Инжиниринг</title>
-    <meta name="description" content="🤖 KompasAutoDrawAI — автоматическое создание чертежей в КОМПАС-3D с искусственным интеллектом. Анализ модели, заполнение штампа, чат-ассистент. Скачать полную версию с ИИ.">
-    <meta name="keywords" content="автогенерация чертежей компас, kompasautodrawai, компас авточертеж ии, создание чертежей с ии, компас 3d ии ассистент, автоматические чертежи компас, нейросеть для компаса, kompas ai drawing generator">
+    <title>KompasAutoDrawAI и KompasAutoDowngrader — чертежи с ИИ и конвертер версий КОМПАС-3D | И31 Инжиниринг</title>
+    <meta name="description" content="🤖 Автоматическое создание чертежей в КОМПАС-3D с искусственным интеллектом (KompasAutoDrawAI) и пакетный конвертер для сохранения в ранние версии (KompasAutoDowngrader v2.0.0 FREE). Скачать бесплатно.">
+    <meta name="keywords" content="автогенерация чертежей компас, kompasautodrawai, компас авточертеж ии, создание чертежей с ии, компас 3d ии ассистент, конвертер компаса, пакетное сохранение компаса, даунгрейдер компаса, kompasautodowngrader, сохранить в раннюю версию компаса, отвязка 2d от 3d, пакетная конвертация компаса">
     <meta name="author" content="Ильдар Рашитов">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     
@@ -23,8 +23,8 @@
     <meta name="language" content="ru">
     <meta http-equiv="Content-Language" content="ru">
     <link rel="canonical" href="https://i31-engineering.ru/kompasautodrawai">
-    <meta property="og:title" content="KompasAutoDrawAI — чертежи с ИИ в КОМПАС-3D">
-    <meta property="og:description" content="Автоматическое создание чертежей с искусственным интеллектом. Анализ модели, чат-ассистент, заполнение штампа.">
+    <meta property="og:title" content="KompasAutoDrawAI и KompasAutoDowngrader — чертежи с ИИ и конвертер версий КОМПАС-3D">
+    <meta property="og:description" content="Автоматическое создание чертежей с искусственным интеллектом и пакетный конвертер файлов КОМПАС-3D в ранние версии. Скачать бесплатно.">
     <meta property="og:image" content="https://i31-engineering.ru/img/kompasautodrawai-preview.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -35,8 +35,8 @@
     <meta property="og:site_name" content="И31 Инжиниринг">
     
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="KompasAutoDrawAI — чертежи с ИИ в КОМПАС-3D">
-    <meta name="twitter:description" content="Автоматическое создание чертежей с искусственным интеллектом. Анализ модели, чат-ассистент, заполнение штампа.">
+    <meta name="twitter:title" content="KompasAutoDrawAI и KompasAutoDowngrader — чертежи с ИИ и конвертер версий КОМПАС-3D">
+    <meta name="twitter:description" content="Автоматическое создание чертежей с ИИ и пакетный конвертер файлов КОМПАС-3D в ранние версии. Скачать бесплатно.">
     <meta name="twitter:image" content="https://i31-engineering.ru/img/kompasautodrawai-preview.jpg">
     
     <link rel="preload" href="css/templatemo-ocean-vibes.css" as="style">
@@ -328,6 +328,10 @@
             color: #6c757d;
             border-bottom-color: #6c757d;
         }
+        /* Якорный отступ */
+        #utilities {
+            scroll-margin-top: 80px;
+        }
     </style>
 </head>
 <body>
@@ -338,7 +342,7 @@
     </div>
     
     <div id="downgrader-popup" class="image-popup" style="display: none; position: fixed; z-index: 9999; pointer-events: none;">
-        <img src="img/KompasAutoDowngrader.jpg" alt="KompasAutoDowngrader - интерфейс утилиты" 
+        <img src="img/KompasAutoDowngrader_v2.0.0_FREE.jpg" alt="KompasAutoDowngrader v2.0.0 FREE - интерфейс утилиты" 
              style="width: min(700px, 90vw); border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); border: 3px solid #FFD700;">
     </div>
     
@@ -378,16 +382,16 @@
                     <div style="font-size: 0.8em; margin: 0; padding: 0; line-height: 1.1;">Раскраска 3D<br>в КОМПАС-3D</div>
                 </a>
                 
-                <!-- Кнопка KompasAutoDowngrader - КРАСНАЯ -->
-                <a href="downloads/KompasAutoDowngrader_1.02.rar" download class="downgrader-trigger"
+                <!-- Кнопка KompasAutoDowngrader - КРАСНАЯ (обновлена на v2.0.0 FREE) -->
+                <a href="downloads/KompasAutoDowngrader_v2.0.0_FREE.rar" download class="downgrader-trigger"
                    style="display: flex; flex-direction: column; justify-content: center; align-items: center;
                           background: linear-gradient(135deg, #DC143C 0%, #8B0000 100%); 
                           color: white; padding: 6px 15px; border-radius: 8px; text-decoration: none; 
                           font-weight: bold; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: all 0.3s ease;
                           border: 2px solid #FFD700; min-width: 150px; height: 60px; text-align: center;
                           line-height: 1;">
-                    <div style="font-size: 0.9em; color: #FFD700; margin: 0; padding: 0; line-height: 1;">⬇️ DOWNGRADER</div>
-                    <div style="font-size: 0.8em; margin: 0; padding: 0; line-height: 1.1;">Конвертер<br>в ранние версии</div>
+                    <div style="font-size: 0.9em; color: #FFD700; margin: 0; padding: 0; line-height: 1;">⬇️ DOWNGRADER v2.0.0</div>
+                    <div style="font-size: 0.8em; margin: 0; padding: 0; line-height: 1.1;">Конвертер в ранние<br>версии (FREE до 50)</div>
                 </a>
                 
                 <!-- Баннер 1 - Внимание для КОМПАС -->
@@ -458,6 +462,13 @@
                         <i class="far fa-3x fa-comments" aria-hidden="true"></i>
                     </a>
                 </li>
+                <!-- НОВЫЙ ПУНКТ: УТИЛИТЫ -->
+                <li class="tm-nav-item">
+                    <a href="#utilities" data-effect="mfp-move-from-top" class="tm-nav-link">
+                        УТИЛИТЫ
+                        <i class="fas fa-3x fa-tools" aria-hidden="true"></i>
+                    </a>
+                </li>
             </ul>
         </nav>
 
@@ -485,110 +496,128 @@
                             <p><strong>4. Студенческие работы:</strong></p>
                             <p>- выполнение курсовых, рефератов и других работ по инженерным дисциплинам с учётом всех требований.</p>
 
-                            <!-- ГЛАВНЫЙ БЛОК: KompasAutoDrawAI v1.2.0 -->
-                            <div class="utility-download">
-                                <h3>🤖 KompasAutoDrawAI v1.2.0 <span class="version-badge">ИСКУССТВЕННЫЙ ИНТЕЛЛЕКТ</span></h3>
-                                <p><strong>Автоматическое создание чертежей из 3D моделей КОМПАС-3D с помощью ИИ</strong></p>
-                                
-                                <a href="downloads/KompasAutoDrawAI_v1.2.0_licensed.rar" class="download-btn-ai" style="color: white !important;" download>
-                                    📥 Скачать полную версию с ИИ (26.5 MB)
-                                </a>
-                                
-                                <p><strong>Возможности AI версии (в дополнение к базовым):</strong></p>
-                                <ul class="utility-features">
-                                    <li>🧠 Интеллектуальный анализ 3D-модели — ИИ оценивает состав, готовность документации, выявляет проблемные компоненты</li>
-                                    <li>📋 Автозаполнение основной надписи по данным модели, или на основе требований пользователя — ИИ предлагает значения полей (организация, разработчик, проверяющий и т. д.)</li>
-                                    <li>💬 Чат-ассистент по ГОСТ, КОМПАС-3D и работе с утилитой (отвечает на любые технические (и не только) вопросы)</li>
-                                    <li>📜 Долговременная память чата — запоминает факты об организации, проекте, сотрудниках - и использует эту информацию при анализе проекта</li>
-                                    <li>📊 HTML-отчёт с детализацией по каждому чертежу</li>
-                                    <li>🔧 Профили основной надписи — сохранение реквизитов разных организаций или проектов</li>
-                                    <li>⚙️ Гибкие настройки ИИ: выбор AI-модели из списка, или ручной ввод любой доступной современной</li>
-                                </ul>
-                                
-                                <p><strong>Базовые возможности (как в Free версии):</strong></p>
-                                <ul class="utility-features">
-                                    <li>4 вида: Спереди, Слева, Сверху, Изометрия</li>
-                                    <li>Автоподбор формата листа от А4 до А0</li>
-                                    <li>Автоподбор масштаба по ГОСТ 2.302-68</li>
-                                    <li>Автоматическая простановка габаритных размеров</li>
-                                    <li>Заполнение основной надписи по ГОСТ 2.104</li>
-                                    <li>Визуальный редактор штампа как в КОМПАС</li>
-                                    <li>Цветовая подсветка компонентов по типу</li>
-                                    <li>Фильтрация: сборочные единицы, детали, стандартные изделия и т. д.</li>
-                                </ul>
-                                
-                                <div class="system-requirements">
+                            <!-- БЛОК УТИЛИТ (с якорем #utilities) -->
+                            <div id="utilities" style="scroll-margin-top: 80px;">
+                                <!-- ГЛАВНЫЙ БЛОК: KompasAutoDrawAI v1.2.0 -->
+                                <div class="utility-download">
+                                    <h3>🤖 KompasAutoDrawAI v1.2.0 <span class="version-badge">ИСКУССТВЕННЫЙ ИНТЕЛЛЕКТ</span></h3>
+                                    <p><strong>Автоматическое создание чертежей из 3D моделей КОМПАС-3D с помощью ИИ</strong></p>
+                                    
+                                    <a href="downloads/KompasAutoDrawAI_v1.2.0_licensed.rar" class="download-btn-ai" style="color: white !important;" download>
+                                        📥 Скачать полную версию с ИИ (26.5 MB)
+                                    </a>
+                                    
+                                    <p><strong>Возможности AI версии (в дополнение к базовым):</strong></p>
+                                    <ul class="utility-features">
+                                        <li>🧠 Интеллектуальный анализ 3D-модели — ИИ оценивает состав, готовность документации, выявляет проблемные компоненты</li>
+                                        <li>📋 Автозаполнение основной надписи по данным модели, или на основе требований пользователя — ИИ предлагает значения полей (организация, разработчик, проверяющий и т. д.)</li>
+                                        <li>💬 Чат-ассистент по ГОСТ, КОМПАС-3D и работе с утилитой (отвечает на любые технические (и не только) вопросы)</li>
+                                        <li>📜 Долговременная память чата — запоминает факты об организации, проекте, сотрудниках - и использует эту информацию при анализе проекта</li>
+                                        <li>📊 HTML-отчёт с детализацией по каждому чертежу</li>
+                                        <li>🔧 Профили основной надписи — сохранение реквизитов разных организаций или проектов</li>
+                                        <li>⚙️ Гибкие настройки ИИ: выбор AI-модели из списка, или ручной ввод любой доступной современной</li>
+                                    </ul>
+                                    
+                                    <p><strong>Базовые возможности (как в Free версии):</strong></p>
+                                    <ul class="utility-features">
+                                        <li>4 вида: Спереди, Слева, Сверху, Изометрия</li>
+                                        <li>Автоподбор формата листа от А4 до А0</li>
+                                        <li>Автоподбор масштаба по ГОСТ 2.302-68</li>
+                                        <li>Автоматическая простановка габаритных размеров</li>
+                                        <li>Заполнение основной надписи по ГОСТ 2.104</li>
+                                        <li>Визуальный редактор штампа как в КОМПАС</li>
+                                        <li>Цветовая подсветка компонентов по типу</li>
+                                        <li>Фильтрация: сборочные единицы, детали, стандартные изделия и т. д.</li>
+                                    </ul>
+                                    
+                                    <div class="system-requirements">
+                                        <p><strong>Системные требования:</strong></p>
+                                        <ul>
+                                            <li><strong>ОС:</strong> Windows 10/11 (64-бит)</li>
+                                            <li><strong>КОМПАС-3D:</strong> v19 или выше</li>
+                                            <li><strong>Память:</strong> 8 GB RAM (рекомендуется не менее 16 GB для локальных ИИ-моделей)</li>
+                                            <li><strong>Место на диске:</strong> 90 MB утилита + 5,2 GB Ollama + место для моделей Ollama (облачные почти не занимают места, для локальных потребуется 1–6 ГБ)</li>
+                                            <li><strong>Интернет:</strong> для загрузки моделей и использования облачных ИИ</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <p><strong>Как использовать AI версию:</strong></p>
+                                    <ol>
+                                        <li>Установите <b>Ollama</b> (инструкция в настройках ИИ) и загрузите модель (например, рекомендуемую <code>glm-5:cloud</code>)</li>
+                                        <li>Запустите KompasAutoDrawAI</li>
+                                        <li>Откройте 3D модель в КОМПАС-3D</li>
+                                        <li>Нажмите "Загрузить из активного документа"</li>
+                                        <li>Используйте ИИ-функции: анализ модели, заполнение штампа, чат</li>
+                                        <li>Нажмите "Экспортировать выбранные в CDW"</li>
+                                    </ol>
+                                    
+                                    <p><em>Самый свежий релиз без ограничений в течение нескольких дней. Для приобретения постоянной лицензии обратитесь к разработчику.</em></p>
+                                </div>
+
+                                <!-- Блок KompasAutoDowngrader v2.0.0 FREE -->
+                                <div class="utility-download">
+                                    <h3>⬇️ KompasAutoDowngrader v2.0.0 <span class="version-badge">FREE</span></h3>
+                                    <p><strong>Пакетный конвертер файлов КОМПАС-3D для сохранения в ранние версии</strong></p>
+                                    
+                                    <a href="downloads/KompasAutoDowngrader_v2.0.0_FREE.rar" class="download-btn" download>
+                                        📥 Скачать KompasAutoDowngrader v2.0.0 FREE (25 MB)
+                                    </a>
+                                    
+                                    <p><strong>Ключевые возможности новой версии:</strong></p>
+                                    <ul class="utility-features">
+                                        <li>📂 Перетаскивание файлов и папок (drag & drop) прямо на окно программы</li>
+                                        <li>📋 Импорт открытых документов из КОМПАС одним нажатием</li>
+                                        <li>🧩 Список файлов с флажками – выбирайте, что обрабатывать</li>
+                                        <li>⚡ Фоновая обработка – окно не подвисает, можно работать дальше</li>
+                                        <li>🔄 Автоматическое переподключение к КОМПАС при сбоях – обработка продолжается</li>
+                                        <li>📁 Умная папка назначения – сохраняет структуру подпапок, автоматически разрешает конфликты имён (перезапись/пропуск/переименование)</li>
+                                        <li>❌ Список «Файлы с ошибками» – двойной клик открывает исходный файл в проводнике, можно повторить обработку</li>
+                                        <li>📝 Журнал операций с цветовой индикацией и записью ошибок в errors.log</li>
+                                        <li>🌓 Тёмная/светлая тема интерфейса (светлая по умолчанию)</li>
+                                        <li>🖥️ Отображение версии установленного КОМПАС-3D в правом верхнем углу</li>
+                                        <li>🛡️ Исходные файлы никогда не изменяются – работа идёт с копиями</li>
+                                        <li>📦 Поддержка .m3d, .a3d, .cdw, .spw</li>
+                                        <li>🔗 Режим «Отвязка 2D от 3D» – превращает ассоциативные чертежи в самостоятельные</li>
+                                        <li>📌 Горячие клавиши: Delete (удалить выделенные), Ctrl+A (выбрать все)</li>
+                                    </ul>
+                                    
+                                    <p><strong>Ограничения FREE версии:</strong> до <strong>50 файлов</strong> за один запуск. Для неограниченной обработки нажмите кнопку <strong>«Скачать полную версию»</strong> в интерфейсе утилиты – она откроет страницу приобретения.</p>
+                                    
                                     <p><strong>Системные требования:</strong></p>
                                     <ul>
                                         <li><strong>ОС:</strong> Windows 10/11 (64-бит)</li>
-                                        <li><strong>КОМПАС-3D:</strong> v19 или выше</li>
-                                        <li><strong>Память:</strong> 8 GB RAM (рекомендуется не менее 16 GB для локальных ИИ-моделей)</li>
-                                        <li><strong>Место на диске:</strong> 90 MB утилита + 5,2 GB Ollama + место для моделей Ollama (облачные почти не занимают места, для локальных потребуется 1–6 ГБ)</li>
-                                        <li><strong>Интернет:</strong> для загрузки моделей и использования облачных ИИ</li>
+                                        <li><strong>КОМПАС-3D:</strong> любая установленная версия (для сохранения в нужную)</li>
+                                        <li><strong>Память:</strong> от 4 GB RAM</li>
+                                        <li><strong>Место на диске:</strong> ~50 MB</li>
                                     </ul>
+                                    
+                                    <p><em>Версия 2.0.0 – полностью переработанный интерфейс, фоновый режим, авто-переподключение и многое другое. Скачайте бесплатно и оцените все новшества!</em></p>
                                 </div>
                                 
-                                <p><strong>Как использовать AI версию:</strong></p>
-                                <ol>
-                                    <li>Установите <b>Ollama</b> (инструкция в настройках ИИ) и загрузите модель (например, рекомендуемую <code>glm-5:cloud</code>)</li>
-                                    <li>Запустите KompasAutoDrawAI</li>
-                                    <li>Откройте 3D модель в КОМПАС-3D</li>
-                                    <li>Нажмите "Загрузить из активного документа"</li>
-                                    <li>Используйте ИИ-функции: анализ модели, заполнение штампа, чат</li>
-                                    <li>Нажмите "Экспортировать выбранные в CDW"</li>
-                                </ol>
-                                
-                                <p><em>Самый свежий релиз без ограничений в течение нескольких дней. Для приобретения постоянной лицензии обратитесь к разработчику.</em></p>
-                            </div>
-
-                            <!-- Блоки Downgrader и RAL Color -->
-                            <div class="utility-download">
-                                <h3>⬇️ KompasAutoDowngrader v1.02</h3>
-                                <p><strong>Пакетный конвертер файлов КОМПАС-3D для сохранения в ранние версии</strong></p>
-                                
-                                <a href="downloads/KompasAutoDowngrader_1.02.rar" class="download-btn" download>
-                                    📥 Скачать KompasAutoDowngrader_1.02.rar (32.2 MB)
-                                </a>
-                                
-                                <p><strong>Возможности утилиты:</strong></p>
-                                <ul class="utility-features">
-                                    <li>Пакетное сохранение файлов для ранних версий КОМПАС</li>
-                                    <li>Поддержка .m3d, .a3d, .cdw, .spw</li>
-                                    <li>Конвертация в версии от Компас 5.11 до Компас 24</li>
-                                    <li>Сохранение структуры папок при обработке</li>
-                                    <li>Автоматическое закрытие диалоговых окон КОМПАС</li>
-                                    <li>Отвязка 2D файлов от 3D моделей (опционально)</li>
-                                    <li>FREE версия с ограничением количества файлов</li>
-                                    <li>PRO версия без ограничений и без требования интернета</li>
-                                    <li>Подробный лог обработки с ошибками</li>
-                                </ul>
-                                
-                            </div>
-                            
-                            <div class="utility-download">
-                                <h3>🎨 KompasRALColor Free</h3>
-                                <p><strong>Утилита для автоматической раскраски 3D моделей в КОМПАС-3D по палитре RAL</strong></p>
-                                
-                                <a href="downloads/KompasRALColor_Free.exe" class="download-btn" download>
-                                    📥 Скачать KompasRALColor_Free.exe (15.8 MB)
-                                </a>
-                                
-                                <p><strong>Возможности утилиты:</strong></p>
-                                <ul class="utility-features">
-                                    <li>Раскраска выделенных деталей в сборках КОМПАС-3D</li>
-                                    <li>4 бесплатных цвета RAL в Free версии (1000, 1019, 1026, 2005)</li>
-                                    <li>Простое управление: выделил → выбрал цвет → применил</li>
-                                    <li>Поддержка всех типов объектов: детали, сборки, грани</li>
-                                    <li>История примененных цветов с возможностью отмены</li>
-                                    <li>Полный сброс цветов ко всем деталям в документе</li>
-                                    <li>Копирование номеров RAL в буфер обмена</li>
-                                    <li>Поиск цвета по номеру RAL и названию</li>
-                                </ul>
-                                
-                                <p><em>Free версия включает 4 базовых цвета RAL. Полная версия со всеми цветами доступна на <a href="https://fixcad.ru" target="_blank" style="color: #2c6c9c;">fixcad.ru</a></em></p>
-                            </div>
-
-                            <!-- Блок Free будет позже в SEO-контенте -->
+                                <!-- Блок KompasRALColor Free -->
+                                <div class="utility-download">
+                                    <h3>🎨 KompasRALColor Free</h3>
+                                    <p><strong>Утилита для автоматической раскраски 3D моделей в КОМПАС-3D по палитре RAL</strong></p>
+                                    
+                                    <a href="downloads/KompasRALColor_Free.exe" class="download-btn" download>
+                                        📥 Скачать KompasRALColor_Free.exe (15.8 MB)
+                                    </a>
+                                    
+                                    <p><strong>Возможности утилиты:</strong></p>
+                                    <ul class="utility-features">
+                                        <li>Раскраска выделенных деталей в сборках КОМПАС-3D</li>
+                                        <li>4 бесплатных цвета RAL в Free версии (1000, 1019, 1026, 2005)</li>
+                                        <li>Простое управление: выделил → выбрал цвет → применил</li>
+                                        <li>Поддержка всех типов объектов: детали, сборки, грани</li>
+                                        <li>История примененных цветов с возможностью отмены</li>
+                                        <li>Полный сброс цветов ко всем деталям в документе</li>
+                                        <li>Копирование номеров RAL в буфер обмена</li>
+                                        <li>Поиск цвета по номеру RAL и названию</li>
+                                    </ul>
+                                    
+                                    <p><em>Free версия включает 4 базовых цвета RAL. Полная версия со всеми цветами доступна на <a href="https://fixcad.ru" target="_blank" style="color: #2c6c9c;">fixcad.ru</a></em></p>
+                                </div>
+                            </div> <!-- конец #utilities -->
 
                             <p>В случае отсутствия в приведенном перечне желаемых услуг, для решения задач могут быть привлечены проверенные партнёры, обладающие необходимыми компетенциями.</p>
                         </div>
@@ -917,23 +946,23 @@
         </div>
     </div>
 
-    <!-- Дополнительный SEO контент для продвижения AI версии -->
+    <!-- Дополнительный SEO-контент для продвижения обеих утилит -->
     <section id="seo-content" style="padding: 50px 20px; background: #f9f9f9; color: #333;">
         <div class="tm-container" style="max-width: 1200px; margin: 0 auto;">
-            <h1 style="color: #2c6c9c; margin-bottom: 30px; font-size: 2em;">KompasAutoDrawAI — создание чертежей с искусственным интеллектом в КОМПАС-3D</h1>
+            <h1 style="color: #2c6c9c; margin-bottom: 30px; font-size: 2em;">KompasAutoDrawAI и KompasAutoDowngrader — полный набор инструментов для КОМПАС-3D</h1>
             
-            <h2 style="color: #2c6c9c; margin: 40px 0 20px 0;">ИИ-ассистент, который понимает ГОСТ и экономит ваше время</h2>
+            <h2 style="color: #2c6c9c; margin: 40px 0 20px 0;">🤖 KompasAutoDrawAI — создание чертежей с искусственным интеллектом</h2>
             <p style="font-size: 1.1em; line-height: 1.6; margin-bottom: 25px;">KompasAutoDrawAI — это эволюция автоматизации чертежей. В отличие от встроенных средств КОМПАС-3D утилита не просто создаёт виды на чертеже, а создаёт весь комплект КД с автоматическим подбором нужных форматов, авторасстановкой видов подходящего масштаба и автоматической простановкой габаритных размеров на проекционных видах. Искусственный интеллект анализирует всю сборку, даёт рекомендации по оформлению, заполняет штамп, общается с вами через чат и запоминает особенности вашего проекта. Всё, что раньше требовало опыта нормоконтролёра, теперь делается автоматически.</p>
             
             <h3 style="color: #333; margin: 30px 0 15px 0;">Ключевые преимущества AI версии</h3>
             <ul style="line-height: 1.6; margin-bottom: 30px; padding-left: 20px;">
                 <li style="margin-bottom: 10px;"><strong>🧠 Интеллектуальный анализ:</strong> ИИ оценивает состав модели, выявляет проблемные компоненты, проверяет соответствие ЕСКД.</li>
-                <li style="margin-bottom: 10px;"><strong>📋 Автозаполнение штампа:</strong> Мгновенно предлагает значения для "Разработал", "Проверил", "Организация" и других полей основной надписи на основе контекста, или по требованиям пользователя</li>
+                <li style="margin-bottom: 10px;"><strong>📋 Автозаполнение штампа:</strong> Мгновенно предлагает значения для "Разработал", "Проверил", "Организация" и других полей основной надписи на основе контекста.</li>
                 <li style="margin-bottom: 10px;"><strong>💬 Чат-ассистент:</strong> Отвечает на вопросы по ГОСТ, КОМПАС-3D и работе утилиты, запоминает важные факты.</li>
                 <li style="margin-bottom: 10px;"><strong>🔧 Гибкие настройки:</strong> Выбор локальных или облачных моделей ИИ, настройка глубины истории и памяти.</li>
             </ul>
 
-            <!-- Промо-ролик KompasAutoDrawAI с обновлёнными заголовками -->
+            <!-- Промо-ролик KompasAutoDrawAI -->
             <div class="video-section">
                 <h3>🤖 KompasAutoDrawAI - Новейшая разработка с искусственным интеллектом</h3>
                 <div class="video-tag">⚡ НОВИНКА ⚡</div>
@@ -948,17 +977,34 @@
                 </div>
             </div>
 
-            <!-- Сначала фиолетовый блок с AI (наверху) -->
+            <!-- НОВЫЙ БЛОК ПРО DOWNGRADER (усиленное SEO) -->
+            <h2 style="color: #2c6c9c; margin: 60px 0 20px 0; border-top: 2px solid #2c6c9c; padding-top: 30px;">⬇️ KompasAutoDowngrader — пакетный конвертер файлов КОМПАС-3D в ранние версии</h2>
+            <p style="font-size: 1.1em; line-height: 1.6; margin-bottom: 25px;">
+                <strong>KompasAutoDowngrader v2.0.0 FREE</strong> – это мощная утилита для пакетного сохранения чертежей, моделей и спецификаций КОМПАС-3D в более ранние версии. Она поддерживает форматы <strong>.m3d, .a3d, .cdw, .spw</strong> и позволяет выбирать целевую версию от Компас 5.11 до Компас 24. Программа работает в фоновом режиме, автоматически переподключается к КОМПАС при сбоях, сохраняет структуру папок и имеет режим «отвязки 2D от 3D» – превращает ассоциативные чертежи в самостоятельные.
+            </p>
+            <p style="font-size: 1.1em; line-height: 1.6; margin-bottom: 25px;">
+                <strong>Ключевые возможности:</strong> перетаскивание файлов и папок (drag & drop), импорт открытых документов из КОМПАС, список с флажками, умное разрешение конфликтов имён, журнал операций, тёмная/светлая тема, отображение версии установленного КОМПАС. <strong>FREE версия обрабатывает до 50 файлов за запуск</strong> – этого достаточно для большинства задач. Для неограниченной обработки нажмите кнопку «Скачать полную версию» в интерфейсе утилиты.
+            </p>
+            <p style="font-size: 1.1em; line-height: 1.6; margin-bottom: 25px;">
+                Скачайте <strong>KompasAutoDowngrader v2.0.0 FREE</strong> прямо сейчас и забудьте о проблемах совместимости файлов! Это идеальное решение для обмена документами с партнёрами, работающими на старых версиях КОМПАС-3D.
+            </p>
+            <div style="text-align: center; margin: 30px 0;">
+                <a href="downloads/KompasAutoDowngrader_v2.0.0_FREE.rar" class="download-btn" style="background: linear-gradient(45deg, #DC143C, #8B0000); color: white !important;" download>
+                    📥 Скачать KompasAutoDowngrader v2.0.0 FREE (25 MB)
+                </a>
+            </div>
+            <!-- Конец блока Downgrader -->
+
+            <!-- Блоки для AutoDrawAI (оставлены) -->
             <div style="text-align: center; margin-top: 40px; padding: 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 12px;">
                 <h3 style="color: white; margin-bottom: 20px;">Готовы попробовать чертежи с искусственным интеллектом?</h3>
-                <p style="font-size: 1.2em; margin-bottom: 25px; color: white;">Скачайте KompasAutoDrawAI — Бесплатно!(для получения бесплатной лицензии на несколько дней напишите на <strong><a href="mailto:irashitov79@mail.ru" style="color: white; text-decoration: underline;"> irashitov79@mail.ru</strong>)</p>
+                <p style="font-size: 1.2em; margin-bottom: 25px; color: white;">Скачайте KompasAutoDrawAI — Бесплатно! (для получения бесплатной лицензии на несколько дней напишите на <strong><a href="mailto:irashitov79@mail.ru" style="color: white; text-decoration: underline;">irashitov79@mail.ru</a></strong>)</p>
                 <a href="downloads/KompasAutoDrawAI_v1.2.0_licensed.rar" class="download-btn-ai" style="background: white; color: #667eea; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.3);" download>
                     📥 Скачать полную AI версию<br>(обновлено 03 апреля 2026 г.)
                 </a>
                 <p style="margin-top: 15px; font-size: 0.9em; color: white;">Версия 1.2.0 | Размер: 26.5 MB | Windows 10/11 | КОМПАС-3D v19+</p>
             </div>
 
-            <!-- Затем блок Free (ниже) -->
             <div style="text-align: center; margin: 40px 0 30px 0;">
                 <h3 style="color: #6c757d;">Если искусственный интеллект не нужен - KompasAutoDraw Free (ограниченная базовая демо-версия без ИИ)</h3>
                 <a href="downloads/KompasAutoDrawFree.rar" class="download-btn" style="background: linear-gradient(45deg, #6c757d, #5a6268); color:white !important;" download>
@@ -1055,11 +1101,11 @@
                 });
             });
             
-            // Отслеживание скачиваний KompasAutoDowngrader
-            const downgraderButtons = document.querySelectorAll('a[href*="KompasAutoDowngrader"]');
+            // Отслеживание скачиваний KompasAutoDowngrader v2.0.0 FREE
+            const downgraderButtons = document.querySelectorAll('a[href*="KompasAutoDowngrader_v2.0.0_FREE"]');
             downgraderButtons.forEach(button => {
                 button.addEventListener('click', function(e) {
-                    trackDownload(e, 'KAD_DOWNLOAD');
+                    trackDownload(e, 'KAD_DOWNGRADER_V2_DOWNLOAD');
                 });
             });
             
@@ -1138,7 +1184,7 @@
                 });
             }
             
-            // Всплывающая картинка для KompasAutoDowngrader
+            // Всплывающая картинка для KompasAutoDowngrader (обновлена на v2.0.0)
             const downgraderBtn = document.querySelector('a.downgrader-trigger');
             const downgraderPopup = document.getElementById('downgrader-popup');
             
