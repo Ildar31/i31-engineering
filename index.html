@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KompasAutoDrawAI и KompasAutoDowngrader — чертежи с ИИ и конвертер версий КОМПАС-3D | И31 Инжиниринг</title>
-    <meta name="description" content="🤖 Автоматическое создание чертежей в КОМПАС-3D с искусственным интеллектом (KompasAutoDrawAI) и пакетный конвертер для сохранения в ранние версии (KompasAutoDowngrader v2.0.0 FREE). Скачать бесплатно.">
-    <meta name="keywords" content="автогенерация чертежей компас, kompasautodrawai, компас авточертеж ии, создание чертежей с ии, компас 3d ии ассистент, конвертер компаса, пакетное сохранение компаса, даунгрейдер компаса, kompasautodowngrader, сохранить в раннюю версию компаса, отвязка 2d от 3d, пакетная конвертация компаса">
+    <title>KompasAutoDrawAI, KompasAutoDowngrader и KompasAutoDXF — утилиты для КОМПАС-3D | И31 Инжиниринг</title>
+    <meta name="description" content="🤖 Автоматическое создание чертежей в КОМПАС-3D с ИИ (KompasAutoDrawAI), пакетный конвертер в ранние версии (KompasAutoDowngrader v2.0.0 FREE) и автосоздание DXF-развёрток с расчётом стоимости РКД (KompasAutoDXF FREE). Скачать бесплатно.">
+    <meta name="keywords" content="автогенерация чертежей компас, kompasautodrawai, компас авточертеж ии, создание чертежей с ии, компас 3d ии ассистент, конвертер компаса, пакетное сохранение компаса, даунгрейдер компаса, kompasautodowngrader, сохранить в раннюю версию компаса, отвязка 2d от 3d, пакетная конвертация компаса, kompasautodxf, dxf развертки компас, автосоздание dxf, листовой металл компас, ведомость покупных изделий, стоимость ркд, расчет стоимости конструкторской документации">
     <meta name="author" content="Ильдар Рашитов">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     
@@ -14,7 +14,7 @@
     <meta name="software_version" content="1.2.1">
     <meta name="software_type" content="Desktop Utility with AI">
     <meta name="operating_system" content="Windows">
-    <meta name="file_formats" content=".m3d, .a3d, .cdw">
+    <meta name="file_formats" content=".m3d, .a3d, .cdw, .spw">
     
     <meta name="geo.region" content="RU-BA">
     <meta name="geo.placename" content="Тюменяк, Республика Башкортостан">
@@ -23,8 +23,8 @@
     <meta name="language" content="ru">
     <meta http-equiv="Content-Language" content="ru">
     <link rel="canonical" href="https://i31-engineering.ru/kompasautodrawai">
-    <meta property="og:title" content="KompasAutoDrawAI и KompasAutoDowngrader — чертежи с ИИ и конвертер версий КОМПАС-3D">
-    <meta property="og:description" content="Автоматическое создание чертежей с искусственным интеллектом и пакетный конвертер файлов КОМПАС-3D в ранние версии. Скачать бесплатно.">
+    <meta property="og:title" content="KompasAutoDrawAI, KompasAutoDowngrader и KompasAutoDXF — утилиты для КОМПАС-3D">
+    <meta property="og:description" content="Автоматическое создание чертежей с ИИ, пакетный конвертер версий КОМПАС-3D и автосоздание DXF-развёрток с расчётом стоимости РКД. Скачать бесплатно.">
     <meta property="og:image" content="https://i31-engineering.ru/img/kompasautodrawai-preview.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -35,8 +35,8 @@
     <meta property="og:site_name" content="И31 Инжиниринг">
     
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="KompasAutoDrawAI и KompasAutoDowngrader — чертежи с ИИ и конвертер версий КОМПАС-3D">
-    <meta name="twitter:description" content="Автоматическое создание чертежей с ИИ и пакетный конвертер файлов КОМПАС-3D в ранние версии. Скачать бесплатно.">
+    <meta name="twitter:title" content="KompasAutoDrawAI, KompasAutoDowngrader и KompasAutoDXF — утилиты для КОМПАС-3D">
+    <meta name="twitter:description" content="Автоматическое создание чертежей с ИИ, пакетный конвертер версий и автосоздание DXF-развёрток. Скачать бесплатно.">
     <meta name="twitter:image" content="https://i31-engineering.ru/img/kompasautodrawai-preview.jpg">
     
     <link rel="preload" href="css/templatemo-ocean-vibes.css" as="style">
@@ -351,6 +351,12 @@
              style="width: min(700px, 90vw); border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); border: 3px solid #FFD700;">
     </div>
 
+    <!-- НОВЫЙ POPUP: KompasAutoDXF -->
+    <div id="dxf-popup" class="image-popup" style="display: none; position: fixed; z-index: 9999; pointer-events: none;">
+        <img src="img/KompasAutoDXF.jpg" alt="KompasAutoDXF FREE - интерфейс утилиты" 
+             style="width: min(800px, 90vw); border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); border: 3px solid #FFD700;">
+    </div>
+
     <header class="tm-site-header">
         <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
             <div>
@@ -382,7 +388,7 @@
                     <div style="font-size: 0.8em; margin: 0; padding: 0; line-height: 1.1;">Раскраска 3D<br>в КОМПАС-3D</div>
                 </a>
                 
-                <!-- Кнопка KompasAutoDowngrader - КРАСНАЯ (обновлена на v2.0.0 FREE) -->
+                <!-- Кнопка KompasAutoDowngrader - КРАСНАЯ (v2.0.0 FREE) -->
                 <a href="downloads/KompasAutoDowngrader_v2.0.0_FREE.rar" download class="downgrader-trigger"
                    style="display: flex; flex-direction: column; justify-content: center; align-items: center;
                           background: linear-gradient(135deg, #DC143C 0%, #8B0000 100%); 
@@ -394,17 +400,17 @@
                     <div style="font-size: 0.8em; margin: 0; padding: 0; line-height: 1.1;">Конвертер в ранние<br>версии (FREE до 50)</div>
                 </a>
                 
-                <!-- Баннер 1 - Внимание для КОМПАС -->
-                <a href="https://fixcad.ru" target="_blank" rel="noopener" 
+                <!-- НОВАЯ КНОПКА: KompasAutoDXF FREE (заменяет "ВНИМАНИЕ") -->
+                <a href="downloads/KompasAutoDXF_FREE_v1.0.0.rar" download class="dxf-trigger"
                    style="display: flex; flex-direction: column; justify-content: center; align-items: center;
                           background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-                          color: white; padding: 6px 20px; border-radius: 8px; text-decoration: none; 
+                          color: white; padding: 6px 15px; border-radius: 8px; text-decoration: none; 
                           font-weight: bold; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: all 0.3s ease;
-                          border: 2px solid #FFD700; min-width: 200px; height: 60px; text-align: center;
+                          border: 2px solid #FFD700; min-width: 180px; height: 60px; text-align: center;
                           line-height: 1;">
-                    <div style="font-size: 0.9em; color: #FFD700; margin: 0; padding: 0; line-height: 1;">🚀 ВНИМАНИЕ!</div>
-                    <div style="font-size: 1em; font-weight: bold; margin: 0; padding: 0; line-height: 1;">ДЛЯ КОМПАС-3D</div>
-                    <div style="font-size: 0.8em; opacity: 0.9; margin: 0; padding: 0; line-height: 1;">пользователей</div>
+                    <div style="font-size: 0.85em; color: #FFD700; margin: 0; padding: 0; line-height: 1;">KompasAutoDXF FREE</div>
+                    <div style="font-size: 0.75em; margin: 0; padding: 0; line-height: 1.1;">📐 Автосоздание DXF</div>
+                    <div style="font-size: 0.75em; opacity: 0.9; margin: 0; padding: 0; line-height: 1.1;">💰 Стоимость РКД</div>
                 </a>
                 
                 <!-- Баннер 2 - Скачать готовые файлы -->
@@ -616,6 +622,47 @@
                                     </ul>
                                     
                                     <p><em>Free версия включает 4 базовых цвета RAL. Полная версия со всеми цветами доступна на <a href="https://fixcad.ru" target="_blank" style="color: #2c6c9c;">fixcad.ru</a></em></p>
+                                </div>
+
+                                <!-- НОВЫЙ БЛОК: KompasAutoDXF FREE -->
+                                <div class="utility-download">
+                                    <h3>📐 KompasAutoDXF v1.0.0 <span class="version-badge">FREE</span></h3>
+                                    <p><strong>Специализированная утилита для конструкторов и технологов: автосоздание DXF-развёрток, структура сборки, ведомость покупных изделий и расчёт стоимости РКД</strong></p>
+                                    
+                                    <a href="downloads/KompasAutoDXF_FREE_v1.0.0.rar" class="download-btn" style="background: linear-gradient(45deg, #667eea, #764ba2); color: white !important;" download>
+                                        📥 Скачать KompasAutoDXF FREE v1.0.0 (40.1 MB)
+                                    </a>
+                                    
+                                    <p><strong>Основные возможности:</strong></p>
+                                    <ul class="utility-features">
+                                        <li>🏗️ Иерархическое дерево сборки с типами компонентов (сборка, деталь, тело, листовая деталь, стандартное изделие, локальная деталь, компоновочная геометрия)</li>
+                                        <li>📄 Таблица листовых деталей: статус развёртки, материал, толщина, масса, площадь, общее количество</li>
+                                        <li>📦 Пакетный экспорт развёрток в DXF, PDF и FRW</li>
+                                        <li>📋 Раскладка всех отмеченных развёрток в один документ КОМПАС-График</li>
+                                        <li>🛒 Автоматическая ведомость покупных изделий по разделам спецификации</li>
+                                        <li>💰 Оценка стоимости КД по форматам листов (А4–А0) с учётом габаритов, уровня сложности, ставки НПД и коэффициента стоимости 3D-модели</li>
+                                        <li>📊 Экспорт таблиц в Excel и TXT, групповое переименование ячеек</li>
+                                        <li>🔍 Три источника данных: открытая сборка, .a3d, каталог .m3d (включая вложенные папки)</li>
+                                        <li>🎨 Современный интерфейс (PySide6) с тёмной навигацией, иконками и горячими клавишами</li>
+                                        <li>💾 Сохранение всех настроек между запусками</li>
+                                        <li>🛡️ Сканирующий режим — ничего не изменяет в исходных файлах модели</li>
+                                        <li>📖 Подробная встроенная справка и журнал ошибок</li>
+                                    </ul>
+
+                                    <p style="font-size: 0.95em; color: #555; margin: 15px 0;">
+                                        <strong>Ограничения FREE версии:</strong> экспорт развёрток (DXF/PDF/FRW) — до 10 шт. за запуск; компоновка в .cdw и ведомость покупных изделий в Excel недоступны. Остальные функции работают как в полной версии. Полная версия — по кнопке «💳 Скачать полную версию» в панели «Источник данных».
+                                    </p>
+                                    
+                                    <div class="system-requirements">
+                                        <p><strong>Системные требования:</strong></p>
+                                        <ul>
+                                            <li><strong>ОС:</strong> Windows</li>
+                                            <li><strong>КОМПАС-3D:</strong> версии 16 и новее (для полноценного экспорта развёрток — 18+)</li>
+                                            <li><strong>Рекомендуется:</strong> актуальное экспресс-обновление КОМПАС-3D</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <p><em>Единый исполняемый файл, внешние ресурсы не требуются. Подходит для конструкторов листового металла, технологов и инженеров, которым нужно быстро получить развёртки, структуру сборки или ведомость покупных изделий без ручного перебора компонентов.</em></p>
                                 </div>
                             </div> <!-- конец #utilities -->
 
@@ -946,10 +993,10 @@
         </div>
     </div>
 
-    <!-- Дополнительный SEO-контент для продвижения обеих утилит -->
+    <!-- Дополнительный SEO-контент для продвижения утилит -->
     <section id="seo-content" style="padding: 50px 20px; background: #f9f9f9; color: #333;">
         <div class="tm-container" style="max-width: 1200px; margin: 0 auto;">
-            <h1 style="color: #2c6c9c; margin-bottom: 30px; font-size: 2em;">KompasAutoDrawAI и KompasAutoDowngrader — полный набор инструментов для КОМПАС-3D</h1>
+            <h1 style="color: #2c6c9c; margin-bottom: 30px; font-size: 2em;">KompasAutoDrawAI, KompasAutoDowngrader и KompasAutoDXF — полный набор инструментов для КОМПАС-3D</h1>
             
             <h2 style="color: #2c6c9c; margin: 40px 0 20px 0;">🤖 KompasAutoDrawAI — создание чертежей с искусственным интеллектом</h2>
             <p style="font-size: 1.1em; line-height: 1.6; margin-bottom: 25px;">KompasAutoDrawAI — это эволюция автоматизации чертежей. В отличие от встроенных средств КОМПАС-3D утилита не просто создаёт виды на чертеже, а создаёт весь комплект КД с автоматическим подбором нужных форматов, авторасстановкой видов подходящего масштаба и автоматической простановкой габаритных размеров на проекционных видах. Искусственный интеллект анализирует всю сборку, даёт рекомендации по оформлению, заполняет штамп, общается с вами через чат и запоминает особенности вашего проекта. Всё, что раньше требовало опыта нормоконтролёра, теперь делается автоматически.</p>
@@ -977,7 +1024,7 @@
                 </div>
             </div>
 
-            <!-- НОВЫЙ БЛОК ПРО DOWNGRADER (усиленное SEO) -->
+            <!-- БЛОК ПРО DOWNGRADER (усиленное SEO) -->
             <h2 style="color: #2c6c9c; margin: 60px 0 20px 0; border-top: 2px solid #2c6c9c; padding-top: 30px;">⬇️ KompasAutoDowngrader — пакетный конвертер файлов КОМПАС-3D в ранние версии</h2>
             <p style="font-size: 1.1em; line-height: 1.6; margin-bottom: 25px;">
                 <strong>KompasAutoDowngrader v2.0.0 FREE</strong> – это мощная утилита для пакетного сохранения чертежей, моделей и спецификаций КОМПАС-3D в более ранние версии. Она поддерживает форматы <strong>.m3d, .a3d, .cdw, .spw</strong> и позволяет выбирать целевую версию от Компас 5.11 до Компас 24. Программа работает в фоновом режиме, автоматически переподключается к КОМПАС при сбоях, сохраняет структуру папок и имеет режим «отвязки 2D от 3D» – превращает ассоциативные чертежи в самостоятельные.
@@ -994,6 +1041,41 @@
                 </a>
             </div>
             <!-- Конец блока Downgrader -->
+
+            <!-- НОВЫЙ БЛОК: KompasAutoDXF -->
+            <h2 style="color: #2c6c9c; margin: 60px 0 20px 0; border-top: 2px solid #2c6c9c; padding-top: 30px;">📐 KompasAutoDXF — автосоздание DXF-развёрток, структура сборки и расчёт стоимости РКД</h2>
+            <p style="font-size: 1.1em; line-height: 1.6; margin-bottom: 25px;">
+                <strong>KompasAutoDXF</strong> — специализированная утилита для конструкторов и технологов, работающих в КОМПАС-3D. Она берёт на себя рутинные операции со сборочными единицами и листовыми деталями: сканирует сборку, строит иерархию, находит листовые и потенциально листовые компоненты, экспортирует развёртки в DXF, PDF и FRW, а также формирует ведомость покупных изделий и рассчитывает стоимость конструкторской документации.
+            </p>
+            <p style="font-size: 1.1em; line-height: 1.6; margin-bottom: 25px;">
+                <strong>Структура сборки:</strong> иерархическое дерево с типами компонентов (сборка, деталь, тело, листовая деталь, стандартное изделие, локальная деталь, компоновочная геометрия). Отображается скрытость, количество вхождений, общее количество, материал, габариты, масса, раздел спецификации. Есть поиск, фильтры по типам, «умная» сортировка (включая сортировку по числам и форматам), панель свойств с миниатюрой и экспорт структуры в TXT/Excel.
+            </p>
+            <p style="font-size: 1.1em; line-height: 1.6; margin-bottom: 25px;">
+                <strong>Листовой металл:</strong> таблица всех найденных листовых и потенциально листовых деталей со статусом развёртки, материалом, толщиной, массой, площадью и общим количеством. Пакетный экспорт в DXF, PDF и FRW. Настраиваемое имя файла из свойств (обозначение, наименование, материал, толщина и т.д.), транслитерация, обработка отверстий (удаление / замена гладких и резьбовых). Раскладка всех отмеченных развёрток в один документ КОМПАС-График. Экспорт таблицы в Excel и TXT, групповое переименование ячеек.
+            </p>
+            <p style="font-size: 1.1em; line-height: 1.6; margin-bottom: 25px;">
+                <strong>Ведомость покупных изделий:</strong> автоматическое формирование по разделам спецификации («Прочие изделия», «Стандартные изделия», «Материалы»). Сортировка групп, перемещение строк, удаление. Генерация документа ведомости прямо в КОМПАС-3D.
+            </p>
+            <p style="font-size: 1.1em; line-height: 1.6; margin-bottom: 25px;">
+                <strong>Оценка стоимости конструкторской документации:</strong> расчёт по форматам листов (А4–А0) с учётом габаритов, уровня сложности, ставки НПД и коэффициента стоимости 3D-модели. Режимы: по модели, модель + правки, полностью вручную. Редакторы форматов и расценок, быстрый ввод по количеству листов, добавление по габаритам.
+            </p>
+            <p style="font-size: 1.1em; line-height: 1.6; margin-bottom: 25px;">
+                <strong>Источники данных:</strong> открытая сборка в КОМПАС-3D (самый быстрый способ), файл .a3d (КОМПАС работает в фоне), каталог с файлами .m3d (включая вложенные папки). <strong>Системные требования:</strong> Windows, КОМПАС-3D версии 16 и новее (для полноценного экспорта развёрток — 18+), рекомендуется актуальное экспресс-обновление КОМПАС-3D.
+            </p>
+            <p style="font-size: 1.1em; line-height: 1.6; margin-bottom: 25px;">
+                <strong>Для кого:</strong> конструкторы листового металла, технологи, инженеры, которым нужно быстро получить развёртки, структуру сборки или ведомость покупных изделий без ручного перебора компонентов. Утилита работает в «сканирующем» режиме — ничего не изменяет в исходных файлах модели.
+            </p>
+
+            <p style="font-size: 1em; line-height: 1.6; margin-bottom: 25px; color: #555;">
+                <strong>Ограничения FREE версии:</strong> экспорт развёрток — до 10 файлов за запуск, компоновка в .cdw и выгрузка ведомости в Excel недоступны; остальное работает как в полной версии. Кнопка «💳 Скачать полную версию» находится в панели «Источник данных».
+            </p>
+
+            <div style="text-align: center; margin: 30px 0;">
+                <a href="downloads/KompasAutoDXF_FREE_v1.0.0.rar" class="download-btn" style="background: linear-gradient(45deg, #667eea, #764ba2); color: white !important;" download>
+                    📥 Скачать KompasAutoDXF FREE v1.0.0 (40.1 MB)
+                </a>
+            </div>
+            <!-- Конец блока KompasAutoDXF -->
 
             <!-- Блоки для AutoDrawAI (оставлены) -->
             <div style="text-align: center; margin-top: 40px; padding: 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 12px;">
@@ -1018,7 +1100,8 @@
     </section>
 
     <footer class="tm-footer">
-        <span>И31 Инжиниринг 2026</span>
+        <!-- АВТОМАТИЧЕСКИЙ ГОД -->
+        <span>И31 Инжиниринг <span id="current-year">2026</span></span>
         <iframe src="https://yandex.ru/sprav/widget/rating-badge/61853759723?type=rating" width="150" height="50" frameborder="0" title="Рейтинг И31 Инжиниринг на Яндексе"></iframe>
     </footer>
 
@@ -1031,6 +1114,12 @@
     <!-- Скрипт для FAQ и отслеживания скачиваний -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // АВТОМАТИЧЕСКИЙ ГОД В ПОДВАЛЕ
+            const yearEl = document.getElementById('current-year');
+            if (yearEl) {
+                yearEl.textContent = new Date().getFullYear();
+            }
+
             // FAQ аккордеон
             const faqQuestions = document.querySelectorAll('.faq-question');
             faqQuestions.forEach(question => {
@@ -1116,6 +1205,14 @@
                     trackDownload(e, 'KRC_DOWNLOAD');
                 });
             });
+
+            // НОВОЕ: Отслеживание скачиваний KompasAutoDXF
+            const dxfButtons = document.querySelectorAll('a[href*="KompasAutoDXF"]');
+            dxfButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    trackDownload(e, 'KADXF_DOWNLOAD');
+                });
+            });
             
             // Всплывающая картинка для KompasAutoDrawAI
             const autodrawAiBtn = document.querySelector('a.autodraw-ai-trigger');
@@ -1184,7 +1281,7 @@
                 });
             }
             
-            // Всплывающая картинка для KompasAutoDowngrader (обновлена на v2.0.0)
+            // Всплывающая картинка для KompasAutoDowngrader (v2.0.0)
             const downgraderBtn = document.querySelector('a.downgrader-trigger');
             const downgraderPopup = document.getElementById('downgrader-popup');
             
@@ -1317,6 +1414,73 @@
                     }
                 });
             }
+
+            // НОВОЕ: Всплывающая картинка для KompasAutoDXF
+            const dxfBtn = document.querySelector('a.dxf-trigger');
+            const dxfPopup = document.getElementById('dxf-popup');
+            
+            if (dxfBtn && dxfPopup) {
+                let popupTimeout;
+                
+                dxfBtn.addEventListener('mouseenter', function(e) {
+                    clearTimeout(popupTimeout);
+                    
+                    const x = e.clientX + 20;
+                    const y = e.clientY + 20;
+                    
+                    dxfPopup.style.left = x + 'px';
+                    dxfPopup.style.top = y + 'px';
+                    dxfPopup.style.display = 'block';
+                    
+                    setTimeout(() => {
+                        const popupRect = dxfPopup.getBoundingClientRect();
+                        const screenWidth = window.innerWidth;
+                        const screenHeight = window.innerHeight;
+                        
+                        if (popupRect.right > screenWidth - 10) {
+                            dxfPopup.style.left = (e.clientX - popupRect.width - 10) + 'px';
+                        }
+                        
+                        if (popupRect.bottom > screenHeight - 10) {
+                            dxfPopup.style.top = (e.clientY - popupRect.height - 10) + 'px';
+                        }
+                        
+                        if (popupRect.left < 10) {
+                            dxfPopup.style.left = '10px';
+                        }
+                    }, 10);
+                });
+                
+                dxfBtn.addEventListener('mousemove', function(e) {
+                    const x = e.clientX + 20;
+                    const y = e.clientY + 20;
+                    
+                    dxfPopup.style.left = x + 'px';
+                    dxfPopup.style.top = y + 'px';
+                });
+                
+                dxfBtn.addEventListener('mouseleave', function() {
+                    popupTimeout = setTimeout(() => {
+                        dxfPopup.style.display = 'none';
+                    }, 300);
+                });
+                
+                dxfPopup.addEventListener('mouseenter', function() {
+                    clearTimeout(popupTimeout);
+                });
+                
+                dxfPopup.addEventListener('mouseleave', function() {
+                    popupTimeout = setTimeout(() => {
+                        dxfPopup.style.display = 'none';
+                    }, 300);
+                });
+                
+                window.addEventListener('resize', function() {
+                    if (dxfPopup.style.display === 'block') {
+                        dxfPopup.style.display = 'none';
+                    }
+                });
+            }
         });
     </script>
     
@@ -1325,7 +1489,7 @@
         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
         ym(99955334,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
     </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/99955334" style="position:absolute; left:-9999px;" alt="Счетчик Яндекс Метрики"></div></noscript>
+    <noscript><div><img src="https://mc.yandex.ru/metrika/watch/99955334" style="position:absolute; left:-9999px;" alt="Счетчик Яндекс Метрики"></div></noscript>
     
     <script>
     document.addEventListener("DOMContentLoaded", () => {
